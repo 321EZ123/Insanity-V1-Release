@@ -1,1 +1,1 @@
-eyJyb290IjpbIi4vc3JjL0FwcC50c3giLCIuL3NyYy9HYW1lcy50c3giLCIuL3NyYy9tYWluLnRzeCIsIi4vc3JjL3ZpdGUtZW52LmQudHMiLCIuL3NyYy9saWIvdXRpbHMudHMiLCIuL3ZpdGUuY29uZmlnLnRzIl0sInZlcnNpb24iOiI1LjYuMyJ9
+{"root":["./src/App.tsx","./src/BrowseUnrestricted.tsx","./src/Games.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/lib/utils.ts","./vite.config.ts"],"version":"5.6.3"}
