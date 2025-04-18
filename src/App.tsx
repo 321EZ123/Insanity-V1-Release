@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-[var(--wope-bg)] text-white">
       <nav className="w-full flex items-center justify-between px-8 pt-8 pb-4 bg-[var(--wope-nav-bg)]/60 backdrop-blur-md z-20 sticky top-0">
-        <div className="flex items-center gap-2">
-          <img src="/insanity-logo.png" alt="Insanity Logo" className="h-8 w-8" />
-          <span className="text-2xl font-bold font-head">Insanity</span>
-        </div>
+        <Link to="/" className="flex items-center gap-2 group">
+          <img src="/insanity-logo.png" alt="Insanity Logo" className="h-8 w-8 transition group-hover:scale-105" />
+          <span className="text-2xl font-bold font-head transition group-hover:text-[var(--wope-purple)]">Insanity</span>
+        </Link>
         <ul className="hidden md:flex gap-8 text-base font-medium">
           <li>
             <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
