@@ -13,10 +13,10 @@ function App() {
         </Link>
         <ul className="hidden md:flex gap-8 text-base font-medium">
           <li>
-            <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
+            <a href="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</a>
           </li>
           <li>
-            <Link to="/browse-unrestricted" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</Link>
+            <a href="/proxy.html" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</a>
           </li>
         </ul>
         <div className="flex gap-3">
