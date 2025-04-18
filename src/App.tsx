@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Games from "./Games";
+import BrowseUnrestricted from "./BrowseUnrestricted";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
           <li>
             <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
           </li>
-          <li className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</li>
+          <li>
+            <Link to="/browse-unrestricted" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</Link>
+          </li>
         </ul>
         <div className="flex gap-3">
           <button className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md">Join Discord</button>
@@ -138,6 +141,7 @@ function App() {
           </>
         } />
         <Route path="/games" element={<Games />} />
+        <Route path="/browse-unrestricted" element={<BrowseUnrestricted />} />
       </Routes>
     </div>
   );
