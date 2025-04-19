@@ -77,10 +77,6 @@
     nav.center-nav a:hover {
       color: var(--wope-purple);
     }
-    nav.center-nav a.active {
-      color: var(--wope-purple);
-      border-bottom: 2.5px solid var(--wope-purple);
-    }
     .discord-btn {
       background: #8f5fff;
       color: #fff;
@@ -89,7 +85,7 @@
       font-size: 1rem;
       border: none;
       border-radius: 0.5em;
-      padding: 0.75em 2.2em 0.75em 2.2em;
+      padding: 0.75em 2.2em;
       cursor: pointer;
       box-shadow: 0 2px 16px 0 #0002;
       transition: background 0.18s, transform 0.14s;
@@ -184,26 +180,17 @@
       }
     }
   </style>
-  <script>
-    if (!window.location.hash.includes('#norefresh')) {
-      window.location.hash = '#norefresh';
-      window.location.reload();
-    } else {
-      // Remove the hash so the next visit does it again
-      window.location.hash = '';
-    }
-  </script>
 </head>
 <body>
   <header>
-    <a class="logo" href="/proxy.html#">
+    <a class="logo" href="/">
       <img src="/insanity-logo.png" alt="Insanity Logo" style="height:1.5em;width:1.5em;border-radius:0.32em;background:#1f1536;" />
       <span style="font-size:1.25rem;">Insanity</span>
     </a>
     <nav class="center-nav">
       <ul>
         <li><a href="/games" id="games-link">Games</a></li>
-        <li><a id="proxy-link" href="/proxy.html#">Proxy</a></li>
+        <li><a id="proxy-link" href="https://printedwaste.com/u/9adxkw" target="_blank" rel="noopener noreferrer">Proxy</a></li>
       </ul>
     </nav>
     <a href="https://discord.gg/Gv4rVt2SJp" class="discord-btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
@@ -224,7 +211,6 @@
   <script src="static/register-sw.js" defer></script>
   <script src="static/search.js" defer></script>
   <script src="static/index.js" defer></script>
-  <script src="script.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const quotes = [
@@ -277,11 +263,6 @@
         "LING GANG GULI GULI GULI WATANG EENGDANG GUUUUUU EENGDANG GU WATANG TANG GULI GULI GULIiIiIiIi WATANG EENGDANG GUUUU EENG DANG GUu!!! - Connor (2025)",
         "Salt and vi_____"
       ];
-
-      document.getElementById('quoteButton').addEventListener('click', function() {
-        const randomIndex = Math.floor(Math.random() * quotes.length);
-        this.innerText = quotes[randomIndex];
-      });
 
       // Force reload mechanism for Proxy nav link
       document.getElementById('proxy-link').addEventListener('click', function (e) {
