@@ -123,6 +123,7 @@
       letter-spacing: 0.06em;
       text-align: center;
       margin-bottom: 2.4em;
+      cursor: pointer; /* Make it clickable */
     }
     .search-card {
       background: #17171A;
@@ -190,14 +191,14 @@
     <nav class="center-nav">
       <ul>
         <li><a href="/games" id="games-link">Games</a></li>
-        <li><a id="proxy-link" href="https://printedwaste.com/u/9adxkw" target="_self" rel="noopener noreferrer">Proxy</a></li>
+        <li><a id="proxy-link" href="/proxy.html" target="_self" rel="noopener noreferrer">Proxy</a></li>
       </ul>
     </nav>
     <a href="https://discord.gg/Gv4rVt2SJp" class="discord-btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
   </header>
   <main>
     <div class="headline">Browse Unrestricted</div>
-    <div class="subtitle">Insanity Search</div>
+    <div class="subtitle" id="quote-generator">Insanity Search</div>
     <div class="search-card">
       <form id="uv-form" class="search-form">
         <input id="uv-search-engine" value="https://duckduckgo.com/?t=h_&q=%s&ia=web" type="hidden" />
@@ -212,73 +213,76 @@
   <script src="static/search.js" defer></script>
   <script src="static/index.js" defer></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const quotes = [
-        "MAX WROTE ONE SENTANCE FOR A WHOLE PERIOD",
-        "Don't forget to do your homework :)",
-        "Made using html and a bunch of other stuff",
-        "Fast and portable",
-        "Go to petezahgames.com for another great site",
-        "Made partially in school",
-        "Join our discord",
-        "Settings coming soon :)",
-        "Runs on UV-Static",
-        "Making this site was kinda annoying ngl",
-        "Programmed in 2 days",
-        "Screw IPAs",
-        "V2?",
-        "You're dumb",
-        "My dog is so cute :)",
-        "The only way to do great work is to love what you do. - Steve Jobs",
-        "Life is what happens when you're busy making other plans. - John Lennon",
-        "Get busy living or get busy dying. - Stephen King",
-        "You only live once, but if you do it right, once is enough. - Mae West",
-        "In the end, we will remember not the words of our enemies, but the silence of our friends. - Martin Luther King Jr.",
-        "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment. - Ralph Waldo Emerson",
-        "Before you criticize someone, walk a mile in their shoes. That way, you'll be a mile from them, and you'll have their shoes. — Jack Handy",
-        "Those people who think they know everything are a great annoyance to those of us who do. ― Isaac Asimov",
-        "SUGGEST MORE QUOTES TO ME IN OUR DISCORD SERVER",
-        "Lebron is king - Gavin",
-        "Six Seven",
-        "the one and only",
-        "William's gay ahhh poses after falling in gimkit are sooooo funnnyyyyy",
-        "uh oh",
-        "Haiyaaaa!!!!",
-        "太不尊弃了",
-        "tell kaifeng to shut up",
-        "github file upload limits are soooo annoying",
-        "Python is slowwwwwwwwww",
-        "Java > C++ fr",
-        "C# and Java are so simmilar",
-        "Life is hard. After all, it kills you. — Katharine Hepburn",
-        "Me better than Aiden at swimming fr",
-        "An ai detector once detected my writing as ai. I'm concerned.",
-        "Eclipse IDE for Java is goated fr",
-        "Fire Hazard!!!!",
-        "If at first you don't succeed, try, try again. Then quit. No use being a damn fool about it. ― W.C. Fields",
-        "Created by EZ123",
-        "BRO I WANT HIS SISTERS NUMBER - James (2025)",
-        "AIDEN DOES NOT UNDERSTAND",
-        "Pluh",
-        "LING GANG GULI GULI GULI WATANG EENGDANG GUUUUUU EENGDANG GU WATANG TANG GULI GULI GULIiIiIiIi WATANG EENGDANG GUUUU EENG DANG GUu!!! - Connor (2025)",
-        "Salt and vi_____"
-      ];
+    const quotes = [
+      "MAX WROTE ONE SENTANCE FOR A WHOLE PERIOD",
+      "Don't forget to do your homework :)",
+      "Made using html and a bunch of other stuff",
+      "Fast and portable",
+      "Go to petezahgames.com for another great site",
+      "Made partially in school",
+      "Join our discord",
+      "Settings coming soon :)",
+      "Runs on UV-Static",
+      "Making this site was kinda annoying ngl",
+      "Programmed in 2 days",
+      "Screw IPAs",
+      "V2?",
+      "You're dumb",
+      "My dog is so cute :)",
+      "The only way to do great work is to love what you do. - Steve Jobs",
+      "Life is what happens when you're busy making other plans. - John Lennon",
+      "Get busy living or get busy dying. - Stephen King",
+      "You only live once, but if you do it right, once is enough. - Mae West",
+      "In the end, we will remember not the words of our enemies, but the silence of our friends. - Martin Luther King Jr.",
+      "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment. - Ralph Waldo Emerson",
+      "Before you criticize someone, walk a mile in their shoes. That way, you'll be a mile from them, and you'll have their shoes. — Jack Handy",
+      "Those people who think they know everything are a great annoyance to those of us who do. ― Isaac Asimov",
+      "SUGGEST MORE QUOTES TO ME IN OUR DISCORD SERVER",
+      "Lebron is king - Gavin",
+      "Six Seven",
+      "the one and only",
+      "William's gay ahhh poses after falling in gimkit are sooooo funnnyyyyy",
+      "uh oh",
+      "Haiyaaaa!!!!",
+      "太不尊弃了",
+      "tell kaifeng to shut up",
+      "github file upload limits are soooo annoying",
+      "Python is slowwwwwwwwww",
+      "Java > C++ fr",
+      "C# and Java are so simmilar",
+      "Life is hard. After all, it kills you. — Katharine Hepburn",
+      "Me better than Aiden at swimming fr",
+      "An ai detector once detected my writing as ai. I'm concerned.",
+      "Eclipse IDE for Java is goated fr",
+      "Fire Hazard!!!!",
+      "If at first you don't succeed, try, try again. Then quit. No use being a damn fool about it. ― W.C. Fields",
+      "Created by EZ123",
+      "BRO I WANT HIS SISTERS NUMBER - James (2025)",
+      "AIDEN DOES NOT UNDERSTAND",
+      "Pluh",
+      "LING GANG GULI GULI GULI WATANG EENGDANG GUUUUUU EENGDANG GU WATANG TANG GULI GULI GULIiIiIiIi WATANG EENGDANG GUUUU EENG DANG GUu!!! - Connor (2025)",
+      "Salt and vi_____"
+    ];
 
-      // Force reload mechanism for Proxy nav link
-      document.getElementById('proxy-link').addEventListener('click', function (e) {
-        sessionStorage.setItem('forceReloadProxy', 'true');
-      });
-      if (window.location.pathname.endsWith('/proxy.html') && sessionStorage.getItem('forceReloadProxy') === 'true') {
-        sessionStorage.removeItem('forceReloadProxy');
-        window.location.reload();
-      }
-
-      // Remove 'active' class from both nav links if currently on proxy.html
-      if (window.location.pathname.endsWith('/proxy.html')) {
-        document.getElementById('proxy-link').classList.remove('active');
-        document.getElementById('games-link').classList.remove('active');
-      }
+    document.getElementById('quote-generator').addEventListener('click', function() {
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      alert(randomQuote);
     });
+
+    // Force reload mechanism for Proxy nav link
+    document.getElementById('proxy-link').addEventListener('click', function (e) {
+      sessionStorage.setItem('forceReloadProxy', 'true');
+    });
+    if (window.location.pathname.endsWith('/proxy.html') && sessionStorage.getItem('forceReloadProxy') === 'true') {
+      sessionStorage.removeItem('forceReloadProxy');
+      window.location.reload();
+    }
+
+    // Remove 'active' class from both nav links if currently on proxy.html
+    if (window.location.pathname.endsWith('/proxy.html')) {
+      document.getElementById('proxy-link').classList.remove('active');
+      document.getElementById('games-link').classList.remove('active');
+    }
   </script>
 </body>
 </html>
