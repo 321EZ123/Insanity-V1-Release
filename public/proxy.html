@@ -266,7 +266,7 @@
 
     document.getElementById('quote-generator').addEventListener('click', function() {
       const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-      alert(randomQuote);
+      this.textContent = randomQuote;
     });
 
     // Force reload mechanism for Proxy nav link
