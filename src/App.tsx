@@ -91,6 +91,43 @@ function App() {
                 </div>
               </div>
             </section>
+            <section className="w-full max-w-6xl mx-auto mt-20 px-4">
+              <div className="flex flex-col md:flex-row items-center gap-6 justify-center">
+                <span className="font-semibold text-base text-white/60 pb-1 tracking-wide">Trusted by students worldwide</span>
+                <div className="flex flex-wrap gap-6 justify-center md:ml-5">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg" alt="Brand 1" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_TV_2015.png" alt="Brand 2" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png" alt="Brand 3" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Brand 4" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
+                </div>
+              </div>
+            </section>
+            <section className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-center mt-28 gap-10 px-4">
+              <div className="order-2 md:order-1 flex flex-col justify-center items-start md:items-start">
+                <h3 className="font-head text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">All Your Search Data in One Place</h3>
+                <p className="text-base md:text-lg text-white/80 mb-6 max-w-md font-medium">
+                  Monitor keyword trends, ranking growth, and competition at a glance—with real-time data, tags, smart insights, and gorgeous dashboards, all in one unified interface.
+                </p>
+                <ul className="flex flex-col gap-2 mb-6 w-full">
+                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-purple)] rounded-full"/> Automated daily updates</li>
+                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-blue)] rounded-full"/> Effortless keyword grouping</li>
+                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-lavender)] rounded-full"/> Project-wide traffic estimation</li>
+                </ul>
+                <button className="rounded-lg px-7 py-3 bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition font-semibold text-base shadow-lg">Join Discord</button>
+              </div>
+              <div className="flex items-center justify-center order-1 md:order-2 relative">
+                <img src="https://ext.same-assets.com/3200949295/3223697921.png" alt="App dashboard screenshot" className="w-[320px] md:w-[420px] rounded-2xl shadow-2xl border-4 border-white/10 bg-white/10" />
+              </div>
+            </section>
+            <section className="mt-32 mb-16 px-4">
+              <div className="max-w-4xl mx-auto bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] rounded-3xl shadow-xl px-8 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-head text-2xl md:text-3xl font-bold text-white mb-2">Ready to Track Smarter?</h3>
+                  <p className="text-white/90 md:text-lg mb-4">Get started free and discover a new era of SEO rank tracking.</p>
+                </div>
+                <button className="rounded-lg px-8 py-4 font-bold bg-white text-[var(--wope-purple)] hover:bg-[var(--wope-lavender)] transition text-lg shadow-xl">Join Discord</button>
+              </div>
+            </section>
             <footer className="w-full bg-[var(--wope-nav-bg)] px-8 pt-14 pb-7 text-white flex flex-col items-center">
               <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl w-full gap-10 md:gap-4">
                 <div className="flex items-center gap-2 mb-5 md:mb-0">
@@ -98,7 +135,7 @@ function App() {
                   <span className="text-2xl font-bold font-head">Insanity</span>
                 </div>
                 <nav className="flex space-x-8">
-                  <Link to="/games" className="hover:text-[var(--wope-purple)] transition">Games</Link>
+                  <Link to="#" className="hover:text-[var(--wope-purple)] transition">Games</Link>
                   <a href="https://printedwaste.com/u/9adxkw" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition">Proxy</a>
                 </nav>
                 <div className="flex space-x-5 mt-5 md:mt-0">
