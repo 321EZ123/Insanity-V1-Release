@@ -112,7 +112,13 @@ function App() {
                 </Link>
               </div>
               <div className="flex items-center justify-center order-1 md:order-2 relative">
-                <img src="https://ext.same-assets.com/3200949295/3223697921.png" alt="Unblocked games preview" className="w-[320px] md:w-[420px] rounded-2xl shadow-2xl border-4 border-white/10 bg-white/10" />
+                <video
+                  src="/insanity-games-preview.mp4"
+                  controls
+                  className="w-[320px] md:w-[420px] rounded-2xl shadow-2xl border-4 border-white/10 bg-white/10"
+                  poster="/insanity-logo.png"
+                  alt="Unblocked games preview"
+                />
               </div>
             </section>
             <section className="mt-32 mb-16 px-4">
@@ -142,7 +148,21 @@ function App() {
                   <a href="/proxy.html" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition">Proxy</a>
                 </nav>
                 <div className="flex space-x-5 mt-5 md:mt-0">
-                  {/* social links as before */}
+                  <a href="https://discord.gg/Gv4rVt2SJp" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition" aria-label="Discord">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.317 4.369a19.791 19.791 0 0 0-4.885-1.515.07.07 0 0 0-.073.035c-.211.375-.444.864-.608 1.249-1.844-.276-3.68-.276-5.486 0-.163-.394-.41-.874-.624-1.249a.077.077 0 0 0-.073-.035C3.366 4.638 2.16 5.89 1.108 7.262a.061.061 0 0 0-.01.021C-.952 10.346-.488 13.375.325 16.346a.083.083 0 0 0 .03.048c2.062 1.522 4.067 2.441 6.038 3.047a.077.077 0 0 0 .084-.03c.464-.638.875-1.31 1.226-2.007a.076.076 0 0 0-.041-.105c-.661-.25-1.294-.547-1.899-.885a.076.076 0 0 1-.008-.127c.127-.097.254-.198.373-.299a.073.073 0 0 1 .073-.009c4.003 1.824 8.308 1.824 12.266 0a.073.073 0 0 1 .074.009c.119.101.246.202.373.299a.076.076 0 0 1-.007.127 12.298 12.298 0 0 1-1.9.885.076.076 0 0 0-.04.106c.36.697.772 1.369 1.226 2.007a.076.076 0 0 0 .084.03c1.977-.606 3.982-1.525 6.038-3.047a.08.08 0 0 0 .031-.048c.646-2.299 1.4-5.638.443-9.178a.081.081 0 0 0-.011-.021 16.888 16.888 0 0 0-1.789-2.143zm-12.19 8.399c-1.162 0-2.117-1.064-2.117-2.374 0-1.308.936-2.372 2.117-2.372 1.191 0 2.144 1.08 2.117 2.374 0 1.309-.935 2.372-2.117 2.372zm7.355 0c-1.162 0-2.117-1.064-2.117-2.374 0-1.308.936-2.372 2.117-2.372 1.191 0 2.144 1.08 2.117 2.374 0 1.309-.926 2.372-2.117 2.372z"/>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/insanitygames" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.867 8.181 6.839 9.504.5.089.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.609.069-.609 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.914.832.092-.647.349-1.088.634-1.34-2.221-.253-4.555-1.113-4.555-4.951 0-1.094.39-1.991 1.029-2.693-.103-.254-.447-1.273.098-2.653 0 0 .841-.27 2.75 1.025A9.523 9.523 0 0 1 12 6.843a9.6 9.6 0 0 1 2.504.337c1.909-1.296 2.749-1.025 2.749-1.025.546 1.38.203 2.399.1 2.653.64.702 1.029 1.599 1.029 2.693 0 3.847-2.337 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.013 2.418-.013 2.747 0 .268.18.576.688.478A10.025 10.025 0 0 0 22 12.021C22 6.484 17.523 2 12 2z"/>
+                    </svg>
+                  </a>
+                  <a href="https://youtube.com/@insanitygames" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.498 6.186A2.994 2.994 0 0 0 21.511 4.2c-1.755-.468-8.787-.468-8.787-.468s-7.032 0-8.787.468A2.995 2.995 0 0 0 .502 6.186C0 7.861 0 12 0 12s0 4.139.502 5.814a2.999 2.999 0 0 0 1.987 1.987c1.755.468 8.787.468 8.787.468s7.032 0 8.787-.468a2.999 2.999 0 0 0 1.987-1.987C24 16.139 24 12 24 12s0-4.139-.502-5.814zM9.545 15.568V8.431l6.545 3.568-6.545 3.569z"/>
+                    </svg>
+                  </a>
                 </div>
               </div>
               <div className="w-full border-t border-white/10 mt-8 pt-5 text-center text-xs text-white/50">
