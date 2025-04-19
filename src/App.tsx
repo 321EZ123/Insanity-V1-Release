@@ -91,32 +91,28 @@ function App() {
                 </div>
               </div>
             </section>
-            <section className="w-full max-w-6xl mx-auto mt-20 px-4">
-              <div className="flex flex-col md:flex-row items-center gap-6 justify-center">
-                <span className="font-semibold text-base text-white/60 pb-1 tracking-wide">Trusted by users  worldwide</span>
-                <div className="flex flex-wrap gap-6 justify-center md:ml-5">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg" alt="Brand 1" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_TV_2015.png" alt="Brand 2" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png" alt="Brand 3" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Brand 4" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
-                </div>
-              </div>
-            </section>
-            <section className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-center mt-28 gap-10 px-4">
+            <section className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center mt-28 gap-10 px-4">
               <div className="order-2 md:order-1 flex flex-col justify-center items-start md:items-start">
-                <h3 className="font-head text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">All Your Search Data in One Place</h3>
+                <h3 className="font-head text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
+                  Discover Unblocked Games
+                </h3>
                 <p className="text-base md:text-lg text-white/80 mb-6 max-w-md font-medium">
-                  Monitor keyword trends, ranking growth, and competition at a glance—with real-time data, tags, smart insights, and gorgeous dashboards, all in one unified interface.
+                  Play dozens of your favorite unblocked games for free, anytime and anywhere. No downloads, no limits—just click and start having fun instantly on any device!
                 </p>
                 <ul className="flex flex-col gap-2 mb-6 w-full">
-                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-purple)] rounded-full"/> Automated daily updates</li>
-                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-blue)] rounded-full"/> Effortless keyword grouping</li>
-                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-lavender)] rounded-full"/> Project-wide traffic estimation</li>
+                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-purple)] rounded-full"/> 1-click instant play</li>
+                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-blue)] rounded-full"/> 100% unblocked and safe</li>
+                  <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-[var(--wope-lavender)] rounded-full"/> Works at school and work</li>
                 </ul>
-                <button className="rounded-lg px-7 py-3 bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition font-semibold text-base shadow-lg">Join Discord</button>
+                <Link
+                  to="/games"
+                  className="rounded-lg px-7 py-3 bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition font-semibold text-base shadow-lg"
+                >
+                  Play Games
+                </Link>
               </div>
               <div className="flex items-center justify-center order-1 md:order-2 relative">
-                <img src="https://ext.same-assets.com/3200949295/3223697921.png" alt="App dashboard screenshot" className="w-[320px] md:w-[420px] rounded-2xl shadow-2xl border-4 border-white/10 bg-white/10" />
+                <img src="https://ext.same-assets.com/3200949295/3223697921.png" alt="Unblocked games preview" className="w-[320px] md:w-[420px] rounded-2xl shadow-2xl border-4 border-white/10 bg-white/10" />
               </div>
             </section>
             <section className="mt-32 mb-16 px-4">
