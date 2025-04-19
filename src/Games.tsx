@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const GAME_DATA = [
   {
@@ -40,6 +40,10 @@ const GAME_DATA = [
 ];
 
 function Games() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-[var(--wope-bg)] min-h-screen text-white py-16 px-2">
       <h1 className="text-center font-head text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
