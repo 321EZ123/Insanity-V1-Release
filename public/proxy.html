@@ -42,6 +42,11 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      text-decoration: none !important;
+      transition: color 0.18s;
+    }
+    .logo:hover, .logo:hover span {
+      color: var(--wope-purple);
     }
     nav.center-nav {
       flex: 1 1 0;
@@ -68,6 +73,9 @@
       transition: color 0.18s;
       padding-bottom: 2px;
       border: none;
+    }
+    nav.center-nav a:hover {
+      color: var(--wope-purple);
     }
     nav.center-nav a.active {
       color: var(--wope-purple);
@@ -185,8 +193,8 @@
     </a>
     <nav class="center-nav">
       <ul>
-        <li><a href="/games">Games</a></li>
-        <li><a href="/proxy.html" class="active">Proxy</a></li>
+        <li><a href="/games" id="games-link">Games</a></li>
+        <li><a id="proxy-link" href="/proxy.html">Proxy</a></li>
       </ul>
     </nav>
     <a href="https://discord.gg/Gv4rVt2SJp" class="discord-btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
@@ -264,6 +272,21 @@
       const randomIndex = Math.floor(Math.random() * quotes.length);
       this.innerText = quotes[randomIndex];
     });
+
+    // Force reload mechanism for Proxy nav link
+    document.getElementById('proxy-link').addEventListener('click', function (e) {
+      sessionStorage.setItem('forceReloadProxy', 'true');
+    });
+    if (window.location.pathname.endsWith('/proxy.html') && sessionStorage.getItem('forceReloadProxy') === 'true') {
+      sessionStorage.removeItem('forceReloadProxy');
+      window.location.reload();
+    }
+
+    // Remove 'active' class from both nav links if currently on proxy.html
+    if (window.location.pathname.endsWith('/proxy.html')) {
+      document.getElementById('proxy-link').classList.remove('active');
+      document.getElementById('games-link').classList.remove('active');
+    }
   </script>
 </body>
 </html>
