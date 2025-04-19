@@ -69,7 +69,7 @@ function Games() {
       <div className="text-center mt-10">
         <a
           href="https://printedwaste.com/u/9adxkw"
-          target="_blank"
+          target="_self" // Open in the same tab
           rel="noopener noreferrer"
           className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md"
         >
