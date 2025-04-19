@@ -3,27 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insanity Search</title>
+  <title>Browse Unrestricted</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --wope-bg: #110B1C;
-      --wope-nav-bg: #191324;
+      --wope-bg: #0c0c0f;
       --wope-purple: #8f5fff;
       --wope-blue: #36b4fc;
-      --wope-lavender: #d0a7fc;
-      --wope-dark-purple: #5b3bb9;
-      --wope-gradient: linear-gradient(90deg, var(--wope-purple), var(--wope-blue), var(--wope-lavender));
-    }
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
+      --wope-lavender: #b4aee8;
+      --wope-nav-bg: #151518;
+      --wope-gradient: linear-gradient(90deg, #8f5fff 0%, #36b4fc 52%, #b4aee8 100%);
     }
     body {
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
       background: var(--wope-bg);
       color: #fff;
@@ -32,183 +26,182 @@
       flex-direction: column;
     }
     header {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 32px 60px 0 64px;
+      background: transparent;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.1rem 2rem 1.1rem 2rem;
-      background: var(--wope-nav-bg);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 18px 0 rgb(70 29 123 / 12%);
     }
-    .title {
-      font-family: 'Montserrat', 'Inter', Arial, sans-serif;
-      font-weight: 900;
-      font-size: 2.2rem;
-      line-height: 1;
-      letter-spacing: 0.04em;
-      background: var(--wope-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-      margin-bottom: 1.5rem;
-      margin-top: 2.2rem;
-      text-align: center;
+    .logo {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    nav ul {
+    nav.center-nav {
+      flex: 1 1 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    nav.center-nav ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 2.2em;
       margin: 0;
       padding: 0;
     }
-    nav ul li {
+    nav.center-nav ul li {
       margin: 0;
+      padding: 0;
     }
-    .nav-link {
-      color: #c9c3fd;
-      text-decoration: none;
-      font-size: 1.02rem;
-      font-weight: 600;
-      padding: 0.3rem 1.2rem 0.3rem 1.2rem;
-      border-radius: 8px;
-      transition: background 0.2s, color 0.2s, transform 0.18s;
-    }
-    .nav-link.active, .nav-link:hover {
-      background: var(--wope-purple);
+    nav.center-nav a {
       color: #fff;
-      transform: scale(1.07);
-      text-decoration: underline;
-      text-decoration-thickness: 2.5px;
-      text-underline-offset: 3px;
+      font-size: 1.08rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.18s;
+      padding-bottom: 2px;
+      border: none;
+    }
+    nav.center-nav a.active {
+      color: var(--wope-purple);
+      border-bottom: 2.5px solid var(--wope-purple);
+    }
+    .discord-btn {
+      background: #8f5fff;
+      color: #fff;
+      font-family: 'Inter', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.5em;
+      padding: 0.75em 2.2em 0.75em 2.2em;
+      cursor: pointer;
+      box-shadow: 0 2px 16px 0 #0002;
+      transition: background 0.18s, transform 0.14s;
+      margin-left: 15px;
+    }
+    .discord-btn:hover {
+      background: #7151c8;
+      transform: translateY(-2px) scale(1.03);
     }
     main {
-      flex: 1 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       width: 100%;
+      flex: 1 0 auto;
     }
-    #proxy.section {
-      width: 100%;
-      max-width: 435px;
-      margin: 0 auto 0 auto;
-      padding: 2.5rem 1rem 2rem;
-      background: rgba(255,255,255,0.025);
-      border-radius: 1.2rem;
-      border: 1.5px solid rgba(255,255,255,0.10);
-      box-shadow: 0 10px 32px 0 rgba(88, 39, 160, 0.16);
-      margin-bottom: 2.5rem;
-    }
-    h2 {
-      text-align: center;
-      font-size: 1.7rem;
+    .headline {
+      margin: 60px 0 20px 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 700;
+      font-weight: 900;
+      font-size: 3.4rem;
+      text-align: center;
       background: var(--wope-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
-      letter-spacing: 0.03em;
-      margin-bottom: 1.1rem;
+      letter-spacing: 1.2px;
     }
-    .quote-text {
-      display: inline-block;
-      cursor: pointer;
-      background: var(--wope-purple);
+    .subtitle {
+      font-size: 1.3rem;
       color: #fff;
-      font-size: 1.2rem;
       font-weight: 600;
-      padding: 0.65em 2.2em;
-      border-radius: 1em;
-      margin: 0.6em 0 2em 0;
-      box-shadow: 0 1px 15px 0 rgba(74,58,151,0.08);
-      transition: background 0.2s, transform 0.18s;
-      outline: none;
-      border: none;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-bottom: 2.4em;
     }
-    .quote-text:hover, .quote-text:active {
-      background: var(--wope-blue);
-      color: #fff;
-      transform: scale(1.045);
+    .search-card {
+      background: #17171A;
+      padding: 2rem 2.9rem;
+      border-radius: 1.2rem;
+      box-shadow: 0 8px 32px 0 rgba(38,38,74,0.16);
+      border: 2px solid rgba(164,132,255,0.10);
+      min-width: 360px;
+      display: flex;
+      flex-direction: column;
     }
-    form {
+    .search-form {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 0.7em;
     }
     .form__input {
-      width: 96%;
-      padding: 0.7em 1.1em;
-      font-size: 1.15rem;
-      background: rgba(255,255,255,0.045);
+      width: 100%;
+      font-size: 1.2rem;
+      background: transparent;
       color: #fff;
       border: 2px solid var(--wope-purple);
-      border-radius: 10px;
-      margin-top: 0.8em;
-      margin-bottom: 0.4em;
+      border-radius: 8px;
+      padding: 1em 1.1em;
       outline: none;
-      transition: border 0.16s;
+      transition: border 0.16s, box-shadow 0.18s;
+      box-shadow: 0 1.5px 12px 0 rgba(88,79,148,0.09);
+    }
+    .form__input::placeholder {
+      color: #bdbdf3;
+      opacity: 0.82;
+      font-size: 1.15rem;
     }
     .form__input:focus {
       border: 2px solid var(--wope-blue);
-      background: rgba(255,255,255,0.12);
+      box-shadow: 0 2px 14px 0 #36b4fc33;
     }
-    footer {
-      background: var(--wope-nav-bg);
-      border-top: 2px solid var(--wope-purple);
-      width: 100%;
-      text-align: center;
-      padding: 1.1em 0;
-      color: #c9befd;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      flex-shrink: 0;
-    }
-    @media (max-width: 480px) {
-      .title { font-size: 1.5rem; margin-top: 1.3rem; }
-      header { flex-direction: column; gap: 0.9rem; }
-      #proxy.section { padding: 1.2rem 0.35rem; }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 1.8em;
+        padding: 18px 2vw 0 2vw;
+      }
+      .headline {
+        font-size: 2.02rem;
+        margin-top: 38px;
+      }
+      .search-card {
+        min-width: 0;
+        width: 98vw;
+        box-sizing: border-box;
+        padding: 1rem 6vw;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <span style="display: flex; align-items: center; gap: 0.50em;">
-      <img src="/insanity-logo.png" alt="Insanity Logo" style="height:2em;width:2em;border-radius:0.32em;box-shadow:0 1px 8px 0 #581fdc22;margin-right:0.5em;background:#160c28;" />
-      <span class="title">Browse Unrestricted</span>
-    </span>
-    <nav>
+    <a class="logo" href="/">
+      <img src="/insanity-logo.png" alt="Insanity Logo" style="height:2.25em;width:2.25em;border-radius:0.32em;background:#1f1536;" />
+      Insanity
+    </a>
+    <nav class="center-nav">
       <ul>
-        <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/games" class="nav-link">Games</a></li>
-        <li><a href="/proxy.html" class="nav-link active">Proxy</a></li>
-        <li><a href="/partners" class="nav-link">Partners</a></li>
-        <li><a href="https://discord.gg/Gv4rVt2SJp" class="nav-link" target="_blank" rel="noopener noreferrer">Join Discord</a></li>
+        <li><a href="/games">Games</a></li>
+        <li><a href="/proxy.html" class="active">Proxy</a></li>
       </ul>
     </nav>
+    <a href="https://discord.gg/Gv4rVt2SJp" class="discord-btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
   </header>
   <main>
-    <section id="proxy" class="section">
-      <h2>Insanity Search</h2>
-      <div style="text-align: center;">
-        <span class="quote-text" id="quoteButton">Insanity Search</span>
-      </div>
-      <div style="position: relative; text-align: center;">
-        <form id="uv-form">
-          <input id="uv-search-engine" value="https://duckduckgo.com/?t=h_&q=%s&ia=web" type="hidden" />
-          <input id="uv-address" type="text" placeholder="Search Google or type a URL" class="form__input" />
-        </form>
-      </div>
-    </section>
+    <div class="headline">Browse Unrestricted</div>
+    <div class="subtitle">Insanity Search</div>
+    <div class="search-card">
+      <form id="uv-form" class="search-form">
+        <input id="uv-search-engine" value="https://duckduckgo.com/?t=h_&q=%s&ia=web" type="hidden" />
+        <input id="uv-address" type="text" placeholder="Search Google or type a URL" class="form__input" autocomplete="off" />
+      </form>
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 Insanity Services. All rights reserved.</p>
-  </footer>
+
   <script src="static/uv/uv.bundle.js" defer></script>
   <script src="static/uv/uv.config.js" defer></script>
   <script src="static/register-sw.js" defer></script>
@@ -266,6 +259,7 @@
       "LING GANG GULI GULI GULI WATANG EENGDANG GUUUUUU EENGDANG GU WATANG TANG GULI GULI GULIiIiIiIi WATANG EENGDANG GUUUU EENG DANG GUu!!! - Connor (2025)",
       "Salt and vi_____"
     ];
+
     document.getElementById('quoteButton').addEventListener('click', function() {
       const randomIndex = Math.floor(Math.random() * quotes.length);
       this.innerText = quotes[randomIndex];
