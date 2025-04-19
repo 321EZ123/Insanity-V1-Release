@@ -16,7 +16,7 @@ function App() {
             <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
           </li>
           <li>
-            <Link to="/proxy.html" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</Link>
+            <Link to="/proxy.html#" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</Link>
           </li>
         </ul>
         <div className="flex gap-3">
