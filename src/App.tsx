@@ -93,7 +93,7 @@ function App() {
             </section>
             <section className="w-full max-w-6xl mx-auto mt-20 px-4">
               <div className="flex flex-col md:flex-row items-center gap-6 justify-center">
-                <span className="font-semibold text-base text-white/60 pb-1 tracking-wide">Trusted by students worldwide</span>
+                <span className="font-semibold text-base text-white/60 pb-1 tracking-wide">Trusted by users  worldwide</span>
                 <div className="flex flex-wrap gap-6 justify-center md:ml-5">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg" alt="Brand 1" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_TV_2015.png" alt="Brand 2" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
