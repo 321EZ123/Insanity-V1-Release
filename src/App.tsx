@@ -13,10 +13,10 @@ function App() {
         </Link>
         <ul className="hidden md:flex gap-8 text-base font-medium">
           <li>
-            <a href="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</a>
+            <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
           </li>
           <li>
-            <a href="/proxy.html" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</a>
+            <Link to="/proxy.html" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</Link>
           </li>
         </ul>
         <div className="flex gap-3">
@@ -125,8 +125,8 @@ function App() {
                   <span className="text-2xl font-bold font-head">Insanity</span>
                 </div>
                 <nav className="flex space-x-8">
-                  <a href="#" className="hover:text-[var(--wope-purple)] transition">Games</a>
-                  <a href="#" className="hover:text-[var(--wope-purple)] transition">Proxy</a>
+                  <Link to="#" className="hover:text-[var(--wope-purple)] transition">Games</Link>
+                  <Link to="#" className="hover:text-[var(--wope-purple)] transition">Proxy</Link>
                 </nav>
                 <div className="flex space-x-5 mt-5 md:mt-0">
                   <a href="#" aria-label="Twitter" className="opacity-80 hover:opacity-100 transition"><svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.4 3c-2.82 0-5.13 2.34-5.13 5.21 0 .41.04.82.12 1.2C7.69 9.2 4.07 7.42 1.64 4.87c-.45.78-.71 1.69-.71 2.64 0 1.89.96 3.56 2.41 4.53A4.28 4.28 0 012 10.6v.06c0 2.64 1.89 4.83 4.47 5.31-.46.13-.95.2-1.46.2-.36 0-.7-.03-1.04-.09.7 2.2 2.72 3.79 5.12 3.83-1.87 1.45-4.23 2.13-6.62 1.85C2.7 21.65 5.9 22.6 9.29 22.6c6.81 0 10.54-5.82 10.54-10.87 0-.17 0-.34-.01-.51A8.17 8.17 0 0023 3z" /></svg></a>
