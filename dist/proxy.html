@@ -42,6 +42,11 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      text-decoration: none !important;
+      transition: color 0.18s;
+    }
+    .logo:hover, .logo:hover span {
+      color: var(--wope-purple);
     }
     nav.center-nav {
       flex: 1 1 0;
@@ -69,9 +74,8 @@
       padding-bottom: 2px;
       border: none;
     }
-    nav.center-nav a.active {
+    nav.center-nav a:hover {
       color: var(--wope-purple);
-      border-bottom: 2.5px solid var(--wope-purple);
     }
     .discord-btn {
       background: #8f5fff;
@@ -81,7 +85,7 @@
       font-size: 1rem;
       border: none;
       border-radius: 0.5em;
-      padding: 0.75em 2.2em 0.75em 2.2em;
+      padding: 0.75em 2.2em;
       cursor: pointer;
       box-shadow: 0 2px 16px 0 #0002;
       transition: background 0.18s, transform 0.14s;
@@ -119,6 +123,7 @@
       letter-spacing: 0.06em;
       text-align: center;
       margin-bottom: 2.4em;
+      cursor: pointer; /* Make it clickable */
     }
     .search-card {
       background: #17171A;
@@ -180,20 +185,20 @@
 <body>
   <header>
     <a class="logo" href="/">
-      <img src="/insanity-logo.png" alt="Insanity Logo" style="height:2.25em;width:2.25em;border-radius:0.32em;background:#1f1536;" />
-      Insanity
+      <img src="/insanity-logo.png" alt="Insanity Logo" style="height:1.5em;width:1.5em;border-radius:0.32em;background:#1f1536;" />
+      <span style="font-size:1.25rem;">Insanity</span>
     </a>
     <nav class="center-nav">
       <ul>
-        <li><a href="/games">Games</a></li>
-        <li><a href="/proxy.html" class="active">Proxy</a></li>
+        <li><a href="/games" id="games-link">Games</a></li>
+        <li><a id="proxy-link" href="/proxy.html" target="_self" rel="noopener noreferrer">Proxy</a></li>
       </ul>
     </nav>
     <a href="https://discord.gg/Gv4rVt2SJp" class="discord-btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
   </header>
   <main>
     <div class="headline">Browse Unrestricted</div>
-    <div class="subtitle">Insanity Search</div>
+    <div class="subtitle" id="quote-generator">Insanity Search</div>
     <div class="search-card">
       <form id="uv-form" class="search-form">
         <input id="uv-search-engine" value="https://duckduckgo.com/?t=h_&q=%s&ia=web" type="hidden" />
@@ -207,7 +212,6 @@
   <script src="static/register-sw.js" defer></script>
   <script src="static/search.js" defer></script>
   <script src="static/index.js" defer></script>
-  <script src="script.js"></script>
   <script>
     const quotes = [
       "MAX WROTE ONE SENTANCE FOR A WHOLE PERIOD",
@@ -260,10 +264,25 @@
       "Salt and vi_____"
     ];
 
-    document.getElementById('quoteButton').addEventListener('click', function() {
-      const randomIndex = Math.floor(Math.random() * quotes.length);
-      this.innerText = quotes[randomIndex];
+    document.getElementById('quote-generator').addEventListener('click', function() {
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      this.textContent = randomQuote;
     });
+
+    // Force reload mechanism for Proxy nav link
+    document.getElementById('proxy-link').addEventListener('click', function (e) {
+      sessionStorage.setItem('forceReloadProxy', 'true');
+    });
+    if (window.location.pathname.endsWith('/proxy.html') && sessionStorage.getItem('forceReloadProxy') === 'true') {
+      sessionStorage.removeItem('forceReloadProxy');
+      window.location.reload();
+    }
+
+    // Remove 'active' class from both nav links if currently on proxy.html
+    if (window.location.pathname.endsWith('/proxy.html')) {
+      document.getElementById('proxy-link').classList.remove('active');
+      document.getElementById('games-link').classList.remove('active');
+    }
   </script>
 </body>
 </html>
