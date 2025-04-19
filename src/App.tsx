@@ -118,10 +118,17 @@ function App() {
             <section className="mt-32 mb-16 px-4">
               <div className="max-w-4xl mx-auto bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] rounded-3xl shadow-xl px-8 py-14 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="font-head text-2xl md:text-3xl font-bold text-white mb-2">Ready to Track Smarter?</h3>
-                  <p className="text-white/90 md:text-lg mb-4">Get started free and discover a new era of SEO rank tracking.</p>
+                  <h3 className="font-head text-2xl md:text-3xl font-bold text-white mb-2">Experience Lightning-Fast Static Proxy</h3>
+                  <p className="text-white/90 md:text-lg mb-4">
+                    Bypass restrictions and browse seamlessly on any network using our fast, secure static proxy. No configs, no installs—just instant access.
+                  </p>
                 </div>
-                <button className="rounded-lg px-8 py-4 font-bold bg-white text-[var(--wope-purple)] hover:bg-[var(--wope-lavender)] transition text-lg shadow-xl">Join Discord</button>
+                <a
+                  href="/proxy.html"
+                  className="rounded-lg px-8 py-4 font-bold bg-white text-[var(--wope-purple)] hover:bg-[var(--wope-lavender)] transition text-lg shadow-xl"
+                >
+                  Use Proxy
+                </a>
               </div>
             </section>
             <footer className="w-full bg-[var(--wope-nav-bg)] px-8 pt-14 pb-7 text-white flex flex-col items-center">
