@@ -62,32 +62,32 @@ function App() {
             </header>
             <section className="relative z-10 w-full flex flex-col items-center mt-16 px-4 md:px-0">
               <h2 className="font-head text-2xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
-                Unblocked Universally
+                Liberated Students
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                 <div className="group bg-gradient-to-br from-[var(--wope-purple)]/70 to-[var(--wope-blue)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
                   <img src="https://ext.same-assets.com/3200949295/1406833073.png" alt="Auto Keyword Tagging" className="absolute -top-8 -right-8 w-28 opacity-30 group-hover:opacity-60 transition" />
                   <div className="flex items-center gap-3 mb-4">
                     <img src="https://ext.same-assets.com/3200949295/2277306457.svg" alt="Tag Icon" className="w-9 h-9" />
-                    <span className="font-head text-xl">Lightspeed</span>
+                    <span className="font-head text-xl">Anonymous Student</span>
                   </div>
-                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">Lightspeed, the filter that seems to block everything... Except Insanity remains unblocked!</p>
+                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">Insanity is really cool! It’s an unblocked game site where I can play games at school, and it’s super easy to use. I told my friends about it, and now we all play together during breaks. It’s made school a lot more fun and helped me meet more people.</p>
                 </div>
                 <div className="group bg-gradient-to-br from-[var(--wope-bg)]/80 to-[var(--wope-lavender)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
                   <img src="https://ext.same-assets.com/3200949295/4143115960.png" alt="Recommendation" className="absolute -top-8 right-0 w-28 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
                     <img src="https://ext.same-assets.com/3200949295/2525938483.svg" alt="Recommendation Icon" className="w-9 h-9" />
-                    <span className="font-head text-xl">Fortiguard</span>
+                    <span className="font-head text-xl">Exhausted Employee</span>
                   </div>
-                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">Fortiguard can be annoying when trying to entertain oneself in school, but don't worry, as Insanity will always be unblocked!</p>
+                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">After long days at work, I’ve found Insanity to be a great way to unwind. Since it’s unblocked, I can easily access it during my breaks. Playing games helps me recharge a bit, and I’ve even shared it with my colleagues. It’s become a nice escape that helps ease the exhaustion of a busy workweek.</p>
                 </div>
                 <div className="group bg-gradient-to-br from-[var(--wope-dark-purple)]/90 to-[var(--wope-purple)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
                   <img src="https://ext.same-assets.com/3200949295/3794809117.png" alt="Traffic Estimation" className="absolute -top-8 -left-8 w-32 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
                     <img src="https://ext.same-assets.com/3200949295/3606636105.png" alt="Traffic Icon" className="w-9 h-9" />
-                    <span className="font-head text-xl">Securly</span>
+                    <span className="font-head text-xl">Fellow Site Owner - PeteZah Owner</span>
                   </div>
-                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">Securly, a web filter for schools that strives to make the web secure for students, stripping us of all games and entertainment. Never fear, as we remain unblocked on Securly too!</p>
+                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">As a fellow site owner, I truly admire Insanity. My site, petezahgames.com, is dynamic, but Insanity excels as a static website. It’s well-designed and offers a fantastic user experience. It’s impressive to see how a simpler format can still deliver so much value!</p>
                 </div>
               </div>
             </section>
