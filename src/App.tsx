@@ -1,3 +1,6 @@
+
+
+Copy
 import React from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Games from "./Games";
@@ -20,7 +23,7 @@ function App() {
           </li>
           <li>
             <a 
-              href="https://printedwaste.com/u/9adxkw"
+              href="/proxy.html"
               className="hover:text-[var(--wope-purple)] cursor-pointer"
               target={isProxyPage ? "_self" : "_blank"} // Open in same tab on specific pages
               rel="noopener noreferrer"
@@ -93,7 +96,7 @@ function App() {
             </section>
             <section className="w-full max-w-6xl mx-auto mt-20 px-4">
               <div className="flex flex-col md:flex-row items-center gap-6 justify-center">
-                <span className="font-semibold text-base text-white/60 pb-1 tracking-wide">Trusted by users  worldwide</span>
+                <span className="font-semibold text-base text-white/60 pb-1 tracking-wide">Trusted by users worldwide</span>
                 <div className="flex flex-wrap gap-6 justify-center md:ml-5">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg" alt="Brand 1" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_TV_2015.png" alt="Brand 2" className="h-8 grayscale opacity-80 hover:opacity-100 transition" />
@@ -136,12 +139,12 @@ function App() {
                 </div>
                 <nav className="flex space-x-8">
                   <Link to="#" className="hover:text-[var(--wope-purple)] transition">Games</Link>
-                  <a href="https://printedwaste.com/u/9adxkw" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition">Proxy</a>
+                  <a href="/proxy.html" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition">Proxy</a>
                 </nav>
                 <div className="flex space-x-5 mt-5 md:mt-0">
                   <a href="#" aria-label="Twitter" className="opacity-80 hover:opacity-100 transition"><svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.4 3c-2.82 0-5.13 2.34-5.13 5.21 0 .41.04.82.12 1.2C7.69 9.2 4.07 7.42 1.64 4.87c-.45.78-.71 1.69-.71 2.64 0 1.89.96 3.56 2.41 4.53A4.28 4.28 0 012 10.6v.06c0 2.64 1.89 4.83 4.47 5.31-.46.13-.95.2-1.46.2-.36 0-.7-.03-1.04-.09.7 2.2 2.72 3.79 5.12 3.83-1.87 1.45-4.23 2.13-6.62 1.85C2.7 21.65 5.9 22.6 9.29 22.6c6.81 0 10.54-5.82 10.54-10.87 0-.17 0-.34-.01-.51A8.17 8.17 0 0023 3z" /></svg></a>
                   <a href="#" aria-label="LinkedIn" className="opacity-80 hover:opacity-100 transition"><svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 8a6 6 0 016 6v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-5a6 6 0 016-6h4z" /><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /></svg></a>
-                  <a href="#" aria-label="GitHub" className="opacity-80 hover:opacity-100 transition"><svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 20.7a8.34 8.34 0 01-4.9-1.61c-.37-.28-.6-.76-.48-1.21.13-.5.33-1.26.33-1.73a4.3 4.3 0 00-1.17-2.74c2.38-.26 4.89-1.19 4.89-5.27 0-1.14-.39-2.07-1.06-2.79.1-.26.46-1.33-.1-2.78 0 0-.88-.28-2.87 1.08a10.13 10.13 0 00-2.61-.35c-.88 0-1.76.12-2.61.35-1.99-1.36-2.87-1.08-2.87-1.08-.56 1.45-.2 2.52-.1 2.78-.67.72-1.06 1.65-1.06 2.79 0 4.08 2.52 5.01 4.9 5.27-.3.26-.56.74-.63 1.44-.13.53.01 1.06.04 1.26 0 .06.01.12.01.18A8.32 8.32 0 012 20.7" /></svg></a>
+                  <a href="#" aria-label="GitHub" className="opacity-80 hover:opacity-100 transition"><svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 20.7a8.34 8.34 0 01-4.9-1.61c-.37-.28-.6-.76-.48-1.21.13-.5.33-1.26.33-1.73a4.3 4.3 0 00-1.17-2.74c2.38-.26 4.89-1.19 4.89-5.27 0-1.14-.39-2.07-1.06-2.79.1-.26.46-1.33-.1-2.78 0 0-.88-.28-2.87 1.08a10.13 10.13 0 00-2.61-.35c-.88 0-1.76.12-2.61.35-1.99-1.36-2.87-1.08-2.87-1.08.56 1.45-.2 2.52-.1 2.78-.67.72-1.06 1.65-1.06 2.79 0 4.08 2.52 5.01 4.9 5.27-.3.26-.56.74-.63 1.44-.13.53.01 1.06.04 1.26 0 .06.01.12.01.18A8.32 8.32 0 012 20.7" /></svg></a>
                 </div>
               </div>
               <div className="w-full border-t border-white/10 mt-8 pt-5 text-center text-xs text-white/50">
