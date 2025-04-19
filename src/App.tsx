@@ -62,7 +62,7 @@ function App() {
             </header>
             <section className="relative z-10 w-full flex flex-col items-center mt-16 px-4 md:px-0">
               <h2 className="font-head text-2xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
-                Liberated Students
+                Satisfied Users
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                 <div className="group bg-gradient-to-br from-[var(--wope-purple)]/70 to-[var(--wope-blue)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
