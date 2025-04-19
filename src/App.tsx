@@ -1,9 +1,12 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Games from "./Games";
 import BrowseUnrestricted from "./BrowseUnrestricted";
 
 function App() {
+  const location = useLocation();
+  const isProxyPage = location.pathname === '/games' || location.pathname === '/browse-unrestricted';
+
   return (
     <div className="min-h-screen flex flex-col bg-[var(--wope-bg)] text-white">
       <nav className="w-full flex items-center justify-between px-8 pt-8 pb-4 bg-[var(--wope-nav-bg)]/60 backdrop-blur-md z-20 sticky top-0">
@@ -16,7 +19,14 @@ function App() {
             <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
           </li>
           <li>
-            <a href="https://printedwaste.com/u/9adxkw" className="hover:text-[var(--wope-purple)] cursor-pointer" target="_blank" rel="noopener noreferrer">Proxy</a>
+            <a 
+              href="https://printedwaste.com/u/9adxkw"
+              className="hover:text-[var(--wope-purple)] cursor-pointer"
+              target={isProxyPage ? "_self" : "_blank"} // Open in same tab on specific pages
+              rel="noopener noreferrer"
+            >
+              Proxy
+            </a>
           </li>
         </ul>
         <div className="flex gap-3">
