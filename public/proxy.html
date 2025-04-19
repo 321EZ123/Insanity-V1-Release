@@ -217,6 +217,15 @@
   <script src="static/index.js" defer></script>
   <script src="script.js"></script>
   <script>
+    // Force a one-time page refresh whenever proxy.html is visited
+    if (!sessionStorage.getItem('proxyAutoRefreshed')) {
+      sessionStorage.setItem('proxyAutoRefreshed', 'true');
+      window.location.reload();
+      return; // Stop further script execution after reload
+    } else {
+      sessionStorage.removeItem('proxyAutoRefreshed');
+    }
+
     const quotes = [
       "MAX WROTE ONE SENTANCE FOR A WHOLE PERIOD",
       "Don't forget to do your homework :)",
