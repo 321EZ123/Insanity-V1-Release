@@ -64,8 +64,8 @@ function App() {
         <Route path="/" element={
           <>
             <header className="flex flex-col items-center justify-center text-center px-4 md:px-0 mt-12 mb-10 relative">
-              <img src="https://ext.same-assets.com/3200949295/2332041407.png" alt="hero-bg" className="absolute z-0 w-full left-0 top-0 max-h-[600px] object-cover opacity-60" />
-              <img src="https://ext.same-assets.com/3200949295/3795921104.png" alt="hero-lights" className="absolute z-10 left-1/2 top-0 transform -translate-x-1/2 w-[900px] h-[650px] pointer-events-none select-none" />
+              <img src="/images/hero-bg.png" alt="hero-bg" className="absolute z-0 w-full left-0 top-0 max-h-[600px] object-cover opacity-60" />
+              <img src="/images/hero-lights.png" alt="hero-lights" className="absolute z-10 left-1/2 top-0 transform -translate-x-1/2 w-[900px] h-[650px] pointer-events-none select-none" />
               <div className="relative z-20 flex flex-col items-center mt-20 mb-10">
                 <h1 className="font-head text-4xl sm:text-5xl md:text-6xl font-bold mb-6 max-w-3xl bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent drop-shadow-lg">
                   The New Era Of
@@ -84,8 +84,8 @@ function App() {
                   Join our discord for more links!
                 </a>
               </div>
-              <img src="https://ext.same-assets.com/3200949295/2696659440.png" alt="hero-top" className="absolute left-0 top-0 -z-10 w-full pointer-events-none select-none" />
-              <img src="https://ext.same-assets.com/3200949295/1047819486.png" alt="hero-bottom" className="absolute left-0 bottom-0 -z-10 w-full pointer-events-none select-none" />
+              <img src="/images/hero-top.png" alt="hero-top" className="absolute left-0 top-0 -z-10 w-full pointer-events-none select-none" />
+              <img src="/images/hero-bottom.png" alt="hero-bottom" className="absolute left-0 bottom-0 -z-10 w-full pointer-events-none select-none" />
             </header>
             <section className="relative z-10 w-full flex flex-col items-center mt-16 px-4 md:px-0">
               <h2 className="font-head text-2xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
@@ -93,25 +93,25 @@ function App() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                 <div className="group bg-gradient-to-br from-[var(--wope-purple)]/70 to-[var(--wope-blue)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
-                  <img src="https://ext.same-assets.com/3200949295/1406833073.png" alt="Auto Keyword Tagging" className="absolute -top-8 -right-8 w-28 opacity-30 group-hover:opacity-60 transition" />
+                  <img src="/images/keyword-tag.png" alt="Auto Keyword Tagging" className="absolute -top-8 -right-8 w-28 opacity-30 group-hover:opacity-60 transition" />
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="https://ext.same-assets.com/3200949295/2277306457.svg" alt="Tag Icon" className="w-9 h-9" />
+                    <img src="/images/tag-icon.svg" alt="Tag Icon" className="w-9 h-9" />
                     <span className="font-head text-xl">Anonymous Student</span>
                   </div>
                   <p className="text-sm md:text-base text-white/80 pb-2 font-medium">Insanity is really cool! It's an unblocked game site where I can play games at school, and it's super easy to use. I told my friends about it, and now we all play together during breaks. It's made school a lot more fun and helped me meet more people.</p>
                 </div>
                 <div className="group bg-gradient-to-br from-[var(--wope-bg)]/80 to-[var(--wope-lavender)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
-                  <img src="https://ext.same-assets.com/3200949295/4143115960.png" alt="Recommendation" className="absolute -top-8 right-0 w-28 opacity-20 group-hover:opacity-50 transition" />
+                  <img src="/images/recommendation.png" alt="Recommendation" className="absolute -top-8 right-0 w-28 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="https://ext.same-assets.com/3200949295/2525938483.svg" alt="Recommendation Icon" className="w-9 h-9" />
+                    <img src="/images/recommendation-icon.svg" alt="Recommendation Icon" className="w-9 h-9" />
                     <span className="font-head text-xl">Exhausted Employee</span>
                   </div>
                   <p className="text-sm md:text-base text-white/80 pb-2 font-medium">After long days at work, I've found Insanity to be a great way to unwind. Since it's unblocked, I can easily access it during my breaks. Playing games helps me recharge a bit, and I've even shared it with my colleagues. It's become a nice escape that helps ease the exhaustion of a busy workweek.</p>
                 </div>
                 <div className="group bg-gradient-to-br from-[var(--wope-dark-purple)]/90 to-[var(--wope-purple)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
-                  <img src="https://ext.same-assets.com/3200949295/3794809117.png" alt="Traffic Estimation" className="absolute -top-8 -left-8 w-32 opacity-20 group-hover:opacity-50 transition" />
+                  <img src="/images/traffic-estimation.png" alt="Traffic Estimation" className="absolute -top-8 -left-8 w-32 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="https://ext.same-assets.com/3200949295/3606636105.png" alt="Traffic Icon" className="w-9 h-9" />
+                    <img src="/images/traffic-icon.png" alt="Traffic Icon" className="w-9 h-9" />
                     <span className="font-head text-xl">Fellow Website Owner</span>
                   </div>
                   <p className="text-sm md:text-base text-white/80 pb-2 font-medium">As a fellow site owner, I truly admire Insanity. My site is dynamic, but Insanity excels as a static website. It's well-designed and offers a fantastic user experience. It's impressive to see how a simpler format can still deliver so much value!</p>
