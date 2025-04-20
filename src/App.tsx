@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Games from "./Games";
 import BrowseUnrestricted from "./BrowseUnrestricted";
@@ -6,6 +6,33 @@ import BrowseUnrestricted from "./BrowseUnrestricted";
 function App() {
   const location = useLocation();
   const isProxyPage = location.pathname === '/games' || location.pathname === '/browse-unrestricted';
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          if (videoRef.current) {
+            videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
+          }
+        } else {
+          if (videoRef.current) {
+            videoRef.current.pause();
+          }
+        }
+      }
+    }, { threshold: 0.5 });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--wope-bg)] text-white">
@@ -19,7 +46,7 @@ function App() {
             <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
           </li>
           <li>
-            <a 
+            <a
               href="/proxy.html"
               className="hover:text-[var(--wope-purple)] cursor-pointer"
               target={isProxyPage ? "_self" : "_blank"}
@@ -113,11 +140,15 @@ function App() {
               </div>
               <div className="flex items-center justify-center order-1 md:order-2 relative">
                 <video
+                  ref={videoRef}
                   src="/insanity-games-preview.mp4"
                   controls
+                  muted
+                  loop
+                  playsInline
                   className="w-[320px] md:w-[420px] rounded-2xl shadow-2xl border-4 border-white/10 bg-white/10"
                   poster="/insanity-logo.png"
-                  alt="Unblocked games preview"
+                  aria-label="Unblocked games preview"
                 />
               </div>
             </section>
@@ -160,7 +191,7 @@ function App() {
                   </a>
                   <Link to="/" className="hover:text-[var(--wope-purple)] transition" aria-label="YouTube">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M23.498 6.186A2.994 2.994 0 0 0 21.511 4.2c-1.755-.468-8.787-.468-8.787-.468s-7.032 0-8.787.468A2.995 2.995 0 0 0 .502 6.186C0 7.861 0 12 0 12s0 4.139.502 5.814a2.999 2.999 0 0 0 1.987 1.987c1.755.468 8.787.468 8.787.468s7.032 0 8.787-.468a2.999 2.999 0 0 0 1.987-1.987C24 16.139 24 12 24 12s0-4.139-.502-5.814zM9.545 15.568V8.431l6.545 3.568-6.545 3.569z"/>
+                      <path d="M23.498 6.186A2.994 2.994 0 0 0 21.511 4.2c-1.755-.468-8.787-.468-8.787-.468s-7.032 0-8.787.468A2.995 2.995 0 0 0 .502 6.186C0 7.861 0 12 0 12s0 4.139.502 5.814a2.999 2.999 0 0 0 1.987 1.987c1.755.468 8.787.468 8.787.468s7.032 0 8.787-.468a2.999 2.999 0 0 0 1.987-1.987C24 16.139 24 12 24 12s0-4.139-.502-5.814zm-14.953 9.382V8.431l6.545 3.568-6.545 3.569z"/>
                     </svg>
                   </Link>
                 </div>
