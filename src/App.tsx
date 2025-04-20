@@ -85,9 +85,9 @@ function App() {
                   <img src="https://ext.same-assets.com/3200949295/3794809117.png" alt="Traffic Estimation" className="absolute -top-8 -left-8 w-32 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
                     <img src="https://ext.same-assets.com/3200949295/3606636105.png" alt="Traffic Icon" className="w-9 h-9" />
-                    <span className="font-head text-xl">Fellow Site Owner - PeteZah Owner</span>
+                    <span className="font-head text-xl">Fellow Website Owner</span>
                   </div>
-                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">As a fellow site owner, I truly admire Insanity. My site, petezahgames.com, is dynamic, but Insanity excels as a static website. It's well-designed and offers a fantastic user experience. It's impressive to see how a simpler format can still deliver so much value!</p>
+                  <p className="text-sm md:text-base text-white/80 pb-2 font-medium">As a fellow site owner, I truly admire Insanity. My site is dynamic, but Insanity excels as a static website. It's well-designed and offers a fantastic user experience. It's impressive to see how a simpler format can still deliver so much value!</p>
                 </div>
               </div>
             </section>
