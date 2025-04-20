@@ -43,7 +43,7 @@ function App() {
                 <h1 className="font-head text-4xl sm:text-5xl md:text-6xl font-bold mb-6 max-w-3xl bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent drop-shadow-lg">
                   The New Era Of
                   <br className="hidden sm:block" />
-                  Unblocked Games
+                  Unblocked Sites
                 </h1>
                 <p className="text-lg md:text-xl max-w-xl mb-8 text-white/80 font-medium">
                   Insanity is a static unblocked game and proxy site, providing access to a variety of games without restrictions. Enjoy your favorite games from anywhere, whether at school, work, or home.
