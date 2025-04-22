@@ -50,6 +50,13 @@ const GAME_DATA: Game[] = [
       "Dash, dodge, and collect in one of the most popular endless runner games. How far can you go?",
     url: "/static/insanity/hvtrs8%2F-etinmmnie%2Cgktju%60.ko-gcmgs-swbua%7B-qupfgrq%2F",
   },
+  {
+    image: "/images/snow-rider-3d.png", // Add a placeholder image path for Snow Rider 3D
+    title: "Snow Rider 3D",
+    description:
+      "Experience the thrill of snowboarding down beautiful mountains in this exciting 3D adventure!",
+    url: "/static/insanity/hvtrs8%2F-dpirp%7B-aav.eivhwb%2Cim%2Fqnmwpifep3F%2F",
+  },
 ];
 
 interface PopupState {
