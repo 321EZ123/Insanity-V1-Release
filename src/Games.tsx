@@ -144,7 +144,7 @@ function Games() {
             }}
             onMouseDown={handleDrag}
           >
-            <button onClick={closePopup} className="text-red-500 absolute top-2 left-2 z-10">
+            <button onClick={closePopup} className="text-red-500 absolute top-2 left-4 z-10 text-3xl">
               &times;
             </button>
             <iframe
@@ -153,10 +153,10 @@ function Games() {
               className="w-full h-full border rounded"
             ></iframe>
             <div className="absolute bottom-4 right-4 z-10 flex space-x-2">
-              <button onClick={toggleFullscreen} className="bg-blue-500 text-white px-2 py-1 rounded">
+              <button onClick={toggleFullscreen} className="bg-purple-500 text-white px-2 py-1 rounded">
                 ⛶
               </button>
-              <button onClick={refreshPopup} className="bg-green-500 text-white px-2 py-1 rounded">
+              <button onClick={refreshPopup} className="bg-blue-500 text-white px-2 py-1 rounded">
                 🔄
               </button>
             </div>
