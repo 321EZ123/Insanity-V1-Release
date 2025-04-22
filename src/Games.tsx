@@ -135,34 +135,35 @@ function Games() {
       </div>
 
       {popup.open && (
-        <div
-          id="popup"
-          className="fixed bg-white rounded-lg shadow-lg p-4 w-96 h-80"
-          style={{
-            left: "100px",
-            top: "100px",
-            cursor: "move",
-          }}
-          onMouseDown={handleDrag}
-        >
-          <div className="flex justify-between items-center">
-            <button onClick={closePopup} className="text-red-500">
-              &times;
-            </button>
-            <h2 className="font-bold">{popup.game?.title}</h2>
-          </div>
-          <iframe
-            src={popup.game?.url}
-            title={popup.game?.title}
-            className="w-full h-60 border rounded"
-          ></iframe>
-          <div className="flex justify-between mt-2">
-            <button onClick={toggleFullscreen} className="bg-blue-500 text-white px-2 py-1 rounded">
-              ⛶
-            </button>
-            <button onClick={refreshPopup} className="bg-green-500 text-white px-2 py-1 rounded">
-              🔄
-            </button>
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+          <div
+            id="popup"
+            className="bg-white rounded-lg shadow-lg p-4 w-full max-w-4xl h-4/5"
+            style={{
+              margin: "10px", // Leave an inch (~10px) space on each side
+              cursor: "move",
+            }}
+            onMouseDown={handleDrag}
+          >
+            <div className="flex justify-between items-center">
+              <button onClick={closePopup} className="text-red-500">
+                &times;
+              </button>
+              <h2 className="font-bold">{popup.game?.title}</h2>
+            </div>
+            <iframe
+              src={popup.game?.url}
+              title={popup.game?.title}
+              className="w-full h-60 border rounded"
+            ></iframe>
+            <div className="flex justify-between mt-2">
+              <button onClick={toggleFullscreen} className="bg-blue-500 text-white px-2 py-1 rounded">
+                ⛶
+              </button>
+              <button onClick={refreshPopup} className="bg-green-500 text-white px-2 py-1 rounded">
+                🔄
+              </button>
+            </div>
           </div>
         </div>
       )}
