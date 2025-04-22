@@ -20,7 +20,7 @@ const GAME_DATA: Game[] = [
     title: "2048",
     description:
       "Swipe and merge numbered tiles to reach 2048. The addictively simple math puzzle that's easy to start and impossible to stop.",
-    url: "https://insanity-v1-release.netlify.app/static/insanity/hvtr%3A-%2Fmvmlte%2Cgktju%60.ko-224%3A-CI-",
+    url: "/static/insanity/hvtr%3A-%2Fmvmlte%2Cgktju%60.ko-224%3A-CI-",
   },
   {
     image: "/images/traffic-icon.png",
@@ -34,21 +34,21 @@ const GAME_DATA: Game[] = [
     title: "Tetris",
     description:
       "Stack and rotate tetriminos to clear rows—how long can you survive the classic puzzle challenge?",
-    url: "https://example.com/tetris",
+    url: "/static/insanity/hvtrs8%2F-dhbnug.eivhwb%2Cim%2Fvevrks-",
   },
   {
     image: "/images/react-icon.svg",
     title: "Retro Bowl",
     description:
       "Take control as coach in this throwback football game—draft, manage, and play your way to the Retro Bowl!",
-    url: "https://example.com/retro-bowl",
+    url: "/static/insanity/hvtrs8%2F-rgtpo%60oulwnnoakgd%2Cgktju%60.ko-",
   },
   {
     image: "/images/flutter-logo.svg",
     title: "Subway Surfers",
     description:
       "Dash, dodge, and collect in one of the most popular endless runner games. How far can you go?",
-    url: "https://example.com/subway-surfers",
+    url: "/static/insanity/hvtrs8%2F-etinmmnie%2Cgktju%60.ko-gcmgs-swbua%7B-qupfgrq%2F",
   },
 ];
 
