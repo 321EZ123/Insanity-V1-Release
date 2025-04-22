@@ -64,6 +64,13 @@ const GAME_DATA: Game[] = [
       "Live your best virtual life in BitLife, where every decision you make shapes your character's future!",
     url: "/static/insanity/hvtrs8%2F-meantgrlavite%2Cgktju%60.ko-p-bktnide%2Chvmn",
   },
+  {
+    image: "/images/block-blast.png",
+    title: "Block Blast",
+    description:
+      "Match and blast blocks in this fun and addictive puzzle game. Clear the board and score high!",
+    url: "/static/insanity/hvtrs8%2F-rgulbmzfo%2Cgktju%60.ko-",
+  },
 ];
 
 interface PopupState {
