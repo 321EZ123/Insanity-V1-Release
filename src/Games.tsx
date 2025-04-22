@@ -138,25 +138,21 @@ function Games() {
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
           <div
             id="popup"
-            className="bg-white rounded-lg shadow-lg p-4 w-full max-w-4xl h-4/5"
+            className="bg-black rounded-lg shadow-lg p-4 w-full h-full relative"
             style={{
               margin: "10px", // Leave an inch (~10px) space on each side
-              cursor: "move",
             }}
             onMouseDown={handleDrag}
           >
-            <div className="flex justify-between items-center">
-              <button onClick={closePopup} className="text-red-500">
-                &times;
-              </button>
-              <h2 className="font-bold">{popup.game?.title}</h2>
-            </div>
+            <button onClick={closePopup} className="text-red-500 absolute top-2 left-2 z-10">
+              &times;
+            </button>
             <iframe
               src={popup.game?.url}
               title={popup.game?.title}
-              className="w-full h-60 border rounded"
+              className="w-full h-full border rounded"
             ></iframe>
-            <div className="flex justify-between mt-2">
+            <div className="absolute bottom-4 right-4 z-10 flex space-x-2">
               <button onClick={toggleFullscreen} className="bg-blue-500 text-white px-2 py-1 rounded">
                 ⛶
               </button>
