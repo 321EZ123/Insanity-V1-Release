@@ -27,7 +27,7 @@ const GAME_DATA: Game[] = [
     title: "Cookie Clicker",
     description:
       "Bake billions of cookies in this endless clicker—build a cookie empire with upgrades, achievements, and more!",
-    url: "https://example.com/cookie-clicker",
+    url: "/static/insanity/hvtrs8%2F-cmoiigcniakgr%2Ceg%2F",
   },
   {
     image: "/images/tetris.svg",
