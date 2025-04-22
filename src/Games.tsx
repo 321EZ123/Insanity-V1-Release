@@ -1,48 +1,110 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-const GAME_DATA = [
+interface Game {
+  image: string;
+  title: string;
+  description: string;
+  url: string;
+}
+
+const GAME_DATA: Game[] = [
   {
     image: "/images/slope.png",
     title: "Slope",
     description:
       "Dodge obstacles and race down a never-ending 3D slope in this classic hyper-casual reflex game. Simple controls, addicting speed!",
+    url: "https://example.com/slope",
   },
   {
     image: "/images/2048.png",
     title: "2048",
     description:
       "Swipe and merge numbered tiles to reach 2048. The addictively simple math puzzle that's easy to start and impossible to stop.",
+    url: "https://example.com/2048",
   },
   {
     image: "/images/traffic-icon.png",
     title: "Cookie Clicker",
     description:
       "Bake billions of cookies in this endless clicker—build a cookie empire with upgrades, achievements, and more!",
+    url: "https://example.com/cookie-clicker",
   },
   {
     image: "/images/tetris.svg",
     title: "Tetris",
     description:
       "Stack and rotate tetriminos to clear rows—how long can you survive the classic puzzle challenge?",
+    url: "https://example.com/tetris",
   },
   {
     image: "/images/react-icon.svg",
     title: "Retro Bowl",
     description:
       "Take control as coach in this throwback football game—draft, manage, and play your way to the Retro Bowl!",
+    url: "https://example.com/retro-bowl",
   },
   {
     image: "/images/flutter-logo.svg",
     title: "Subway Surfers",
     description:
       "Dash, dodge, and collect in one of the most popular endless runner games. How far can you go?",
+    url: "https://example.com/subway-surfers",
   },
 ];
 
+interface PopupState {
+  open: boolean;
+  game: Game | null;
+}
+
 function Games() {
+  const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const openPopup = (game: Game) => {
+    setPopup({ open: true, game });
+  };
+
+  const closePopup = () => {
+    setPopup({ open: false, game: null });
+  };
+
+  const refreshPopup = () => {
+    window.location.reload();
+  };
+
+  const toggleFullscreen = () => {
+    const popupElement = document.getElementById("popup");
+    if (popupElement && popupElement.requestFullscreen) {
+      popupElement.requestFullscreen();
+    }
+  };
+
+  const handleDrag = (e: React.MouseEvent) => {
+    const popupElement = document.getElementById("popup");
+    if (!popupElement) return;
+
+    let shiftX = e.clientX - popupElement.getBoundingClientRect().left;
+    let shiftY = e.clientY - popupElement.getBoundingClientRect().top;
+
+    const moveAt = (pageX: number, pageY: number) => {
+      popupElement.style.left = pageX - shiftX + "px";
+      popupElement.style.top = pageY - shiftY + "px";
+    };
+
+    const onMouseMove = (e: MouseEvent) => {
+      moveAt(e.pageX, e.pageY);
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.onmouseup = () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.onmouseup = null;
+    };
+  };
 
   return (
     <div className="bg-[var(--wope-bg)] min-h-screen text-white py-16 px-2">
@@ -53,7 +115,8 @@ function Games() {
         {GAME_DATA.map((game) => (
           <div
             key={game.title}
-            className="relative rounded-3xl bg-white/5 border border-white/10 shadow-xl backdrop-blur-[6px] flex flex-col items-center px-6 pt-10 pb-8 hover:scale-[1.03] transition overflow-hidden min-h-[480px] group"
+            className="relative rounded-3xl bg-white/5 border border-white/10 shadow-xl backdrop-blur-[6px] flex flex-col items-center px-6 pt-10 pb-8 hover:scale-[1.03] transition overflow-hidden min-h-[480px] group cursor-pointer"
+            onClick={() => openPopup(game)}
           >
             <img
               src={game.image}
@@ -70,6 +133,40 @@ function Games() {
           </div>
         ))}
       </div>
+
+      {popup.open && (
+        <div
+          id="popup"
+          className="fixed bg-white rounded-lg shadow-lg p-4"
+          style={{
+            left: "100px",
+            top: "100px",
+            cursor: "move",
+          }}
+          onMouseDown={handleDrag}
+        >
+          <div className="flex justify-between items-center">
+            <h2 className="font-bold">{popup.game?.title}</h2>
+            <button onClick={closePopup} className="text-red-500">
+              &times;
+            </button>
+          </div>
+          <iframe
+            src={popup.game?.url}
+            title={popup.game?.title}
+            className="w-full h-60 border rounded"
+          ></iframe>
+          <div className="flex justify-between mt-2">
+            <button onClick={toggleFullscreen} className="bg-blue-500 text-white px-2 py-1 rounded">
+              Fullscreen
+            </button>
+            <button onClick={refreshPopup} className="bg-green-500 text-white px-2 py-1 rounded">
+              Refresh
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="text-center mt-10">
         <a
           href="/proxy.html"
