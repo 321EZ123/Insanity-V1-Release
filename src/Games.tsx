@@ -71,6 +71,20 @@ const GAME_DATA: Game[] = [
       "Match and blast blocks in this fun and addictive puzzle game. Clear the board and score high!",
     url: "/static/insanity/hvtrs8%2F-rgulbmzfo%2Cgktju%60.ko-",
   },
+  {
+    image: "/images/wordle.png", 
+    title: "Wordle",
+    description:
+      "Guess the hidden five-letter word in six attempts. Use your vocabulary skills to solve the puzzle!",
+    url: "/static/insanity/hvtrs8%2F-wuw%2Cn%7Btkmgs%2Ccmm-gcmgs-wmrflg%2Fknfez.jtol", 
+  },
+  {
+    image: "/images/wordle-unlimited.png",
+    title: "Wordle Unlimited",
+    description:
+      "Play Wordle as many times as you want with unlimited words. Keep guessing and improving your skills!",
+    url: "/static/insanity/hvtrs8%2F-wmrflgullkmktgd%2Copg-", 
+  },
 ];
 
 interface PopupState {
