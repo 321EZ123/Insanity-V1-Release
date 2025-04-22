@@ -51,11 +51,18 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-etinmmnie%2Cgktju%60.ko-gcmgs-swbua%7B-qupfgrq%2F",
   },
   {
-    image: "/images/snow-rider-3d.png", // Add a placeholder image path for Snow Rider 3D
+    image: "/images/snow-rider-3d.png", 
     title: "Snow Rider 3D",
     description:
       "Experience the thrill of snowboarding down beautiful mountains in this exciting 3D adventure!",
     url: "/static/insanity/hvtrs8%2F-dpirp%7B-aav.eivhwb%2Cim%2Fqnmwpifep3F%2F",
+  },
+  {
+    image: "/images/bitlife.png", 
+    title: "BitLife",
+    description:
+      "Live your best virtual life in BitLife, where every decision you make shapes your character's future!",
+    url: "/static/insanity/hvtrs8%2F-meantgrlavite%2Cgktju%60.ko-p-bktnide%2Chvmn",
   },
 ];
 
