@@ -59,7 +59,7 @@ interface PopupState {
 
 function Games() {
   const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -137,7 +137,7 @@ function Games() {
       {popup.open && (
         <div
           id="popup"
-          className="fixed bg-white rounded-lg shadow-lg p-4"
+          className="fixed bg-white rounded-lg shadow-lg p-4 w-96 h-80"
           style={{
             left: "100px",
             top: "100px",
@@ -146,10 +146,10 @@ function Games() {
           onMouseDown={handleDrag}
         >
           <div className="flex justify-between items-center">
-            <h2 className="font-bold">{popup.game?.title}</h2>
             <button onClick={closePopup} className="text-red-500">
               &times;
             </button>
+            <h2 className="font-bold">{popup.game?.title}</h2>
           </div>
           <iframe
             src={popup.game?.url}
@@ -158,10 +158,10 @@ function Games() {
           ></iframe>
           <div className="flex justify-between mt-2">
             <button onClick={toggleFullscreen} className="bg-blue-500 text-white px-2 py-1 rounded">
-              Fullscreen
+              ⛶
             </button>
             <button onClick={refreshPopup} className="bg-green-500 text-white px-2 py-1 rounded">
-              Refresh
+              🔄
             </button>
           </div>
         </div>
