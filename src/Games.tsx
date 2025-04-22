@@ -13,14 +13,14 @@ const GAME_DATA: Game[] = [
     title: "Slope",
     description:
       "Dodge obstacles and race down a never-ending 3D slope in this classic hyper-casual reflex game. Simple controls, addicting speed!",
-    url: "https://example.com/slope",
+    url: "/static/insanity/hvtrs8%2F-gcmgdwmr.eivhwb%2Cim%2Fqlmpg%2F",
   },
   {
     image: "/images/2048.png",
     title: "2048",
     description:
       "Swipe and merge numbered tiles to reach 2048. The addictively simple math puzzle that's easy to start and impossible to stop.",
-    url: "https://example.com/2048",
+    url: "https://insanity-v1-release.netlify.app/static/insanity/hvtr%3A-%2Fmvmlte%2Cgktju%60.ko-224%3A-CI-",
   },
   {
     image: "/images/traffic-icon.png",
@@ -73,7 +73,6 @@ function Games() {
   };
 
   const refreshPopup = () => {
-    // Refresh the iframe content by toggling the URL
     if (popup.game) {
       setPopup({ open: false, game: null });
       setTimeout(() => {
@@ -123,7 +122,7 @@ function Games() {
             id="popup"
             className="bg-black rounded-lg shadow-lg p-4 w-full h-full relative"
             style={{
-              margin: "10px", // Leave an inch (~10px) space on each side
+              margin: "10px",
             }}
           >
             <button onClick={closePopup} className="text-red-500 absolute top-2 left-4 z-10 text-3xl">
