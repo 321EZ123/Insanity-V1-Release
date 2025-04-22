@@ -73,7 +73,13 @@ function Games() {
   };
 
   const refreshPopup = () => {
-    window.location.reload();
+    // Refresh the iframe content by toggling the URL
+    if (popup.game) {
+      setPopup({ open: false, game: null });
+      setTimeout(() => {
+        setPopup({ open: true, game: popup.game });
+      }, 0);
+    }
   };
 
   const toggleFullscreen = () => {
@@ -81,29 +87,6 @@ function Games() {
     if (popupElement && popupElement.requestFullscreen) {
       popupElement.requestFullscreen();
     }
-  };
-
-  const handleDrag = (e: React.MouseEvent) => {
-    const popupElement = document.getElementById("popup");
-    if (!popupElement) return;
-
-    let shiftX = e.clientX - popupElement.getBoundingClientRect().left;
-    let shiftY = e.clientY - popupElement.getBoundingClientRect().top;
-
-    const moveAt = (pageX: number, pageY: number) => {
-      popupElement.style.left = pageX - shiftX + "px";
-      popupElement.style.top = pageY - shiftY + "px";
-    };
-
-    const onMouseMove = (e: MouseEvent) => {
-      moveAt(e.pageX, e.pageY);
-    };
-
-    document.addEventListener("mousemove", onMouseMove);
-    document.onmouseup = () => {
-      document.removeEventListener("mousemove", onMouseMove);
-      document.onmouseup = null;
-    };
   };
 
   return (
@@ -142,7 +125,6 @@ function Games() {
             style={{
               margin: "10px", // Leave an inch (~10px) space on each side
             }}
-            onMouseDown={handleDrag}
           >
             <button onClick={closePopup} className="text-red-500 absolute top-2 left-4 z-10 text-3xl">
               &times;
