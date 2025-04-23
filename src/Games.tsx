@@ -95,6 +95,8 @@ interface PopupState {
 function Games() {
   const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
   const [searchTerm, setSearchTerm] = useState("");
+  const [volume, setVolume] = useState(50); // Default volume
+  const [showSlider, setShowSlider] = useState(false);
 
   useEffect(() => {
     if (popup.open) {
@@ -189,12 +191,31 @@ function Games() {
               title={popup.game?.title}
               className="w-full h-full border rounded"
             ></iframe>
-            <div className="absolute bottom-4 right-4 z-10 flex space-x-2">
-              <button onClick={toggleFullscreen} className="bg-purple-500 text-white px-2 py-1 rounded">
-                ⛶
-              </button>
+            <div className="absolute bottom-4 right-4 z-10 flex space-x-2 items-center">
+              <div className="relative group">
+                <button
+                  onMouseEnter={() => setShowSlider(true)}
+                  onMouseLeave={() => setShowSlider(false)}
+                  className="bg-purple-500 text-white px-2 py-1 rounded"
+                >
+                  🔊
+                </button>
+                {showSlider && (
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={volume}
+                    onChange={(e) => setVolume(Number(e.target.value))}
+                    className="absolute -top-6 left-0 mx-2 w-24"
+                  />
+                )}
+              </div>
               <button onClick={refreshPopup} className="bg-blue-500 text-white px-2 py-1 rounded">
                 🔄
+              </button>
+              <button onClick={toggleFullscreen} className="bg-purple-500 text-white px-2 py-1 rounded">
+                ⛶
               </button>
             </div>
           </div>
