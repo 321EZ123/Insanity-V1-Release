@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface Game {
   image: string;
@@ -97,27 +97,19 @@ function Games() {
   const [searchTerm, setSearchTerm] = useState("");
   const [volume, setVolume] = useState(50); // Default volume
   const [showSlider, setShowSlider] = useState(false);
-  const [audioContext, setAudioContext] = useState<AudioContext | null>(null);
-  const [gainNode, setGainNode] = useState<GainNode | null>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
-    const context = new (window.AudioContext || (window as any).webkitAudioContext)();
-    const gain = context.createGain();
-    gain.gain.value = volume / 100; // Convert volume to a 0-1 scale
-    gain.connect(context.destination);
-    setAudioContext(context);
-    setGainNode(gain);
-
-    return () => {
-      context.close();
-    };
-  }, []);
-
-  useEffect(() => {
-    if (gainNode) {
-      gainNode.gain.value = volume / 100; // Update gain node volume
+    if (popup.open && iframeRef.current) {
+      const iframeDoc = iframeRef.current.contentDocument;
+      if (iframeDoc) {
+        const audioElements = iframeDoc.querySelectorAll("audio");
+        audioElements.forEach(audio => {
+          audio.volume = volume / 100; // Set volume for each audio element
+        });
+      }
     }
-  }, [volume, gainNode]);
+  }, [volume, popup.open]);
 
   useEffect(() => {
     if (popup.open) {
@@ -208,9 +200,19 @@ function Games() {
               &times;
             </button>
             <iframe
+              ref={iframeRef}
               src={popup.game?.url}
               title={popup.game?.title}
               className="w-full h-full border rounded"
+              onLoad={() => {
+                const iframeDoc = iframeRef.current?.contentDocument;
+                if (iframeDoc) {
+                  const audioElements = iframeDoc.querySelectorAll("audio");
+                  audioElements.forEach(audio => {
+                    audio.volume = volume / 100; // Set volume on load
+                  });
+                }
+              }}
             ></iframe>
             <div className="absolute bottom-4 right-4 z-10 flex space-x-2 items-center">
               <div className="relative group">
