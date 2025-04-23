@@ -144,7 +144,7 @@ function Games() {
           placeholder="Search games..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-2 rounded border border-gray-300"
+          className="w-full p-2 rounded border border-gray-300 bg-black text-white placeholder:text-white"
         />
       </div>
 
