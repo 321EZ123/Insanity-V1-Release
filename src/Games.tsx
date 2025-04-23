@@ -97,6 +97,27 @@ function Games() {
   const [searchTerm, setSearchTerm] = useState("");
   const [volume, setVolume] = useState(50); // Default volume
   const [showSlider, setShowSlider] = useState(false);
+  const [audioContext, setAudioContext] = useState<AudioContext | null>(null);
+  const [gainNode, setGainNode] = useState<GainNode | null>(null);
+
+  useEffect(() => {
+    const context = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const gain = context.createGain();
+    gain.gain.value = volume / 100; // Convert volume to a 0-1 scale
+    gain.connect(context.destination);
+    setAudioContext(context);
+    setGainNode(gain);
+
+    return () => {
+      context.close();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (gainNode) {
+      gainNode.gain.value = volume / 100; // Update gain node volume
+    }
+  }, [volume, gainNode]);
 
   useEffect(() => {
     if (popup.open) {
