@@ -200,16 +200,20 @@ function Games() {
                 >
                   🔊
                 </button>
-                {showSlider && (
+                <div
+                  onMouseEnter={() => setShowSlider(true)}
+                  onMouseLeave={() => setShowSlider(false)}
+                  className={`${showSlider ? "block" : "hidden"} absolute -top-6 left-0`}
+                >
                   <input
                     type="range"
                     min="0"
                     max="100"
                     value={volume}
                     onChange={(e) => setVolume(Number(e.target.value))}
-                    className="absolute -top-6 left-0 mx-2 w-24"
+                    className="w-24"
                   />
-                )}
+                </div>
               </div>
               <button onClick={refreshPopup} className="bg-blue-500 text-white px-2 py-1 rounded">
                 🔄
