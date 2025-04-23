@@ -51,14 +51,14 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-etinmmnie%2Cgktju%60.ko-gcmgs-swbua%7B-qupfgrq%2F",
   },
   {
-    image: "/images/snow-rider-3d.png", 
+    image: "/images/snow-rider-3d.png",
     title: "Snow Rider 3D",
     description:
       "Experience the thrill of snowboarding down beautiful mountains in this exciting 3D adventure!",
     url: "/static/insanity/hvtrs8%2F-dpirp%7B-aav.eivhwb%2Cim%2Fqnmwpifep3F%2F",
   },
   {
-    image: "/images/bitlife.png", 
+    image: "/images/bitlife.png",
     title: "BitLife",
     description:
       "Live your best virtual life in BitLife, where every decision you make shapes your character's future!",
@@ -72,18 +72,18 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-rgulbmzfo%2Cgktju%60.ko-",
   },
   {
-    image: "/images/wordle.png", 
+    image: "/images/wordle.png",
     title: "Wordle",
     description:
       "Guess the hidden five-letter word in six attempts. Use your vocabulary skills to solve the puzzle!",
-    url: "/static/insanity/hvtrs8%2F-wuw%2Cn%7Btkmgs%2Ccmm-gcmgs-wmrflg%2Fknfez.jtol", 
+    url: "/static/insanity/hvtrs8%2F-wuw%2Cn%7Btkmgs%2Ccmm-gcmgs-wmrflg%2Fknfez.jtol",
   },
   {
     image: "/images/wordle-unlimited.png",
     title: "Wordle Unlimited",
     description:
       "Play Wordle as many times as you want with unlimited words. Keep guessing and improving your skills!",
-    url: "/static/insanity/hvtrs8%2F-wmrflgullkmktgd%2Copg-", 
+    url: "/static/insanity/hvtrs8%2F-wmrflgullkmktgd%2Copg-",
   },
 ];
 
@@ -94,10 +94,15 @@ interface PopupState {
 
 function Games() {
   const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (popup.open) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [popup.open]);
 
   const openPopup = (game: Game) => {
     setPopup({ open: true, game });
@@ -123,13 +128,28 @@ function Games() {
     }
   };
 
+  const filteredGames = GAME_DATA.filter(game =>
+    game.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="bg-[var(--wope-bg)] min-h-screen text-white py-16 px-2">
       <h1 className="text-center font-head text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
         Unblocked Games
       </h1>
+
+      <div className="max-w-6xl mx-auto mb-6">
+        <input
+          type="text"
+          placeholder="Search games..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full p-2 rounded border border-gray-300"
+        />
+      </div>
+
       <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        {GAME_DATA.map((game) => (
+        {filteredGames.map((game) => (
           <div
             key={game.title}
             className="relative rounded-3xl bg-white/5 border border-white/10 shadow-xl backdrop-blur-[6px] flex flex-col items-center px-6 pt-10 pb-8 hover:scale-[1.03] transition overflow-hidden min-h-[480px] group cursor-pointer"
@@ -155,9 +175,10 @@ function Games() {
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
           <div
             id="popup"
-            className="bg-black rounded-lg shadow-lg p-4 w-full h-full relative"
+            className="bg-black rounded-lg shadow-lg p-4 w-full h-full relative overflow-hidden"
             style={{
               margin: "10px",
+              overflowY: "auto", // Enable vertical scrolling for the popup
             }}
           >
             <button onClick={closePopup} className="text-red-500 absolute top-2 left-4 z-10 text-3xl">
