@@ -92,24 +92,17 @@ interface PopupState {
   game: Game | null;
 }
 
-function Games() {
+const Games: React.FC = () => {
   const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
   const [searchTerm, setSearchTerm] = useState("");
   const [volume, setVolume] = useState(50); // Default volume
-  const [showSlider, setShowSlider] = useState(false);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const audioContext = useRef(new (window.AudioContext || (window as any).webkitAudioContext)());
+  const gainNode = useRef(audioContext.current.createGain());
 
   useEffect(() => {
-    if (popup.open && iframeRef.current) {
-      const iframeDoc = iframeRef.current.contentDocument;
-      if (iframeDoc) {
-        const audioElements = iframeDoc.querySelectorAll("audio");
-        audioElements.forEach(audio => {
-          audio.volume = volume / 100; // Set volume for each audio element
-        });
-      }
-    }
-  }, [volume, popup.open]);
+    gainNode.current.gain.value = volume / 100; // Set gain node volume
+    gainNode.current.connect(audioContext.current.destination); // Connect to audio context
+  }, [volume]);
 
   useEffect(() => {
     if (popup.open) {
@@ -125,22 +118,6 @@ function Games() {
 
   const closePopup = () => {
     setPopup({ open: false, game: null });
-  };
-
-  const refreshPopup = () => {
-    if (popup.game) {
-      setPopup({ open: false, game: null });
-      setTimeout(() => {
-        setPopup({ open: true, game: popup.game });
-      }, 0);
-    }
-  };
-
-  const toggleFullscreen = () => {
-    const popupElement = document.getElementById("popup");
-    if (popupElement && popupElement.requestFullscreen) {
-      popupElement.requestFullscreen();
-    }
   };
 
   const filteredGames = GAME_DATA.filter(game =>
@@ -189,7 +166,6 @@ function Games() {
       {popup.open && (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
           <div
-            id="popup"
             className="bg-black rounded-lg shadow-lg p-4 w-full h-full relative overflow-hidden"
             style={{
               margin: "10px",
@@ -200,50 +176,27 @@ function Games() {
               &times;
             </button>
             <iframe
-              ref={iframeRef}
               src={popup.game?.url}
               title={popup.game?.title}
               className="w-full h-full border rounded"
-              onLoad={() => {
-                const iframeDoc = iframeRef.current?.contentDocument;
-                if (iframeDoc) {
-                  const audioElements = iframeDoc.querySelectorAll("audio");
-                  audioElements.forEach(audio => {
-                    audio.volume = volume / 100; // Set volume on load
-                  });
-                }
-              }}
             ></iframe>
             <div className="absolute bottom-4 right-4 z-10 flex space-x-2 items-center">
               <div className="relative group">
                 <button
-                  onMouseEnter={() => setShowSlider(true)}
-                  onMouseLeave={() => setShowSlider(false)}
+                  onMouseEnter={() => setVolume(volume)}
                   className="bg-purple-500 text-white px-2 py-1 rounded"
                 >
                   🔊
                 </button>
-                <div
-                  onMouseEnter={() => setShowSlider(true)}
-                  onMouseLeave={() => setShowSlider(false)}
-                  className={`${showSlider ? "block" : "hidden"} absolute -top-6 left-0`}
-                >
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={volume}
-                    onChange={(e) => setVolume(Number(e.target.value))}
-                    className="w-24"
-                  />
-                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={volume}
+                  onChange={(e) => setVolume(Number(e.target.value))}
+                  className="w-24"
+                />
               </div>
-              <button onClick={refreshPopup} className="bg-blue-500 text-white px-2 py-1 rounded">
-                🔄
-              </button>
-              <button onClick={toggleFullscreen} className="bg-purple-500 text-white px-2 py-1 rounded">
-                ⛶
-              </button>
             </div>
           </div>
         </div>
@@ -261,6 +214,6 @@ function Games() {
       </div>
     </div>
   );
-}
+};
 
 export default Games;
