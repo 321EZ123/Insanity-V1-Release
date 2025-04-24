@@ -9,21 +9,21 @@ interface Game {
 
 const GAME_DATA: Game[] = [
   {
-    image: "/images/slope-custom.png",
+    image: "/images/slope.png",
     title: "Slope",
     description:
       "Dodge obstacles and race down a never-ending 3D slope in this classic hyper-casual reflex game. Simple controls, addicting speed!",
     url: "/static/insanity/hvtrs8%2F-gcmgdwmr.eivhwb%2Cim%2Fqlmpg%2F",
   },
   {
-    image: "/images/2048-custom.png",
+    image: "/images/2048.png",
     title: "2048",
     description:
       "Swipe and merge numbered tiles to reach 2048. The addictively simple math puzzle that's easy to start and impossible to stop.",
     url: "/static/insanity/hvtr%3A-%2Fmvmlte%2Cgktju%60.ko-224%3A-CI-",
   },
   {
-    image: "/images/cookie-clicker-custom.png",
+    image: "/images/traffic-icon.png",
     title: "Cookie Clicker",
     description:
       "Bake billions of cookies in this endless clicker—build a cookie empire with upgrades, achievements, and more!",
@@ -37,49 +37,49 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-dhbnug.eivhwb%2Cim%2Fvevrks-",
   },
   {
-    image: "/images/retrobowl-custom.png",
+    image: "/images/react-icon.svg",
     title: "Retro Bowl",
     description:
       "Take control as coach in this throwback football game—draft, manage, and play your way to the Retro Bowl!",
     url: "/static/insanity/hvtrs8%2F-rgtpo%60oulwnnoakgd%2Cgktju%60.ko-",
   },
   {
-    image: "/images/subway-surfers-custom.png",
+    image: "/images/flutter-logo.svg",
     title: "Subway Surfers",
     description:
       "Dash, dodge, and collect in one of the most popular endless runner games. How far can you go?",
     url: "/static/insanity/hvtrs8%2F-etinmmnie%2Cgktju%60.ko-gcmgs-swbua%7B-qupfgrq%2F",
   },
   {
-    image: "/images/snowrider3d-custom.png",
+    image: "/images/snow-rider-3d.png",
     title: "Snow Rider 3D",
     description:
       "Experience the thrill of snowboarding down beautiful mountains in this exciting 3D adventure!",
     url: "/static/insanity/hvtrs8%2F-dpirp%7B-aav.eivhwb%2Cim%2Fqnmwpifep3F%2F",
   },
   {
-    image: "/images/bitlife-custom.png",
+    image: "/images/bitlife.png",
     title: "BitLife",
     description:
       "Live your best virtual life in BitLife, where every decision you make shapes your character's future!",
     url: "/static/insanity/hvtrs8%2F-meantgrlavite%2Cgktju%60.ko-p-bktnide%2Chvmn",
   },
   {
-    image: "/images/blockblast-custom.png",
+    image: "/images/block-blast.png",
     title: "Block Blast",
     description:
       "Match and blast blocks in this fun and addictive puzzle game. Clear the board and score high!",
     url: "/static/insanity/hvtrs8%2F-rgulbmzfo%2Cgktju%60.ko-",
   },
   {
-    image: "/images/wordle-custom.png",
+    image: "/images/wordle.png",
     title: "Wordle",
     description:
       "Guess the hidden five-letter word in six attempts. Use your vocabulary skills to solve the puzzle!",
     url: "/static/insanity/hvtrs8%2F-wuw%2Cn%7Btkmgs%2Ccmm-gcmgs-wmrflg%2Fknfez.jtol",
   },
   {
-    image: "/images/wordleunlimited-custom.png",
+    image: "/images/wordle-unlimited.png",
     title: "Wordle Unlimited",
     description:
       "Play Wordle as many times as you want with unlimited words. Keep guessing and improving your skills!",
@@ -95,6 +95,7 @@ interface PopupState {
 function Games() {
   const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
   const [searchTerm, setSearchTerm] = useState("");
+  const [sidebarVisible, setSidebarVisible] = useState(true); // State for sidebar visibility
 
   useEffect(() => {
     if (popup.open) {
@@ -106,25 +107,10 @@ function Games() {
 
   const openPopup = (game: Game) => {
     setPopup({ open: true, game });
-    // Request fullscreen on popup open
-    setTimeout(() => {
-      const popupElement = document.getElementById("popup");
-      if (popupElement && popupElement.requestFullscreen) {
-        popupElement.requestFullscreen().catch(() => {
-          // Ignore errors (e.g. user denied fullscreen)
-        });
-      }
-    }, 0);
   };
 
   const closePopup = () => {
     setPopup({ open: false, game: null });
-    // Exit fullscreen when popup closes
-    if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {
-        // Ignore errors
-      });
-    }
   };
 
   const refreshPopup = () => {
@@ -132,48 +118,48 @@ function Games() {
       setPopup({ open: false, game: null });
       setTimeout(() => {
         setPopup({ open: true, game: popup.game });
-        // Request fullscreen again after refresh
-        setTimeout(() => {
-          const popupElement = document.getElementById("popup");
-          if (popupElement && popupElement.requestFullscreen) {
-            popupElement.requestFullscreen().catch(() => {});
-          }
-        }, 0);
       }, 0);
     }
   };
 
   const toggleFullscreen = () => {
     const popupElement = document.getElementById("popup");
-    if (!popupElement) return;
-    if (!document.fullscreenElement) {
-      popupElement.requestFullscreen().catch(() => {});
-    } else {
-      document.exitFullscreen().catch(() => {});
+    if (popupElement && popupElement.requestFullscreen) {
+      popupElement.requestFullscreen();
     }
   };
 
-  const filteredGames = GAME_DATA.filter((game) =>
+  const filteredGames = GAME_DATA.filter(game =>
     game.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  return (
-    <div className="bg-[var(--wope-bg)] min-h-screen text-white py-16 px-2">
-      <h1 className="text-center font-head text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
-        Unblocked Games
-      </h1>
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible); // Toggle sidebar visibility
+  };
 
-      <div className="max-w-6xl mx-auto mb-6">
-        <input
-          type="text"
-          placeholder="Search games..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-2 rounded border border-gray-300 bg-black text-white placeholder:text-white"
-        />
+  return (
+    <div className="bg-[var(--wope-bg)] min-h-screen text-white py-16 px-2 flex">
+      <div className={`transition-transform ${sidebarVisible ? 'max-w-xs' : 'hidden'} mr-4`}>
+        {filteredGames.map((game) => (
+          <div
+            key={game.title}
+            className="mb-4 p-4 rounded bg-white/5 border border-white/10 shadow-lg"
+            onClick={() => openPopup(game)}
+          >
+            <h2 className="font-head text-xl font-bold mb-2">{game.title}</h2>
+            <p className="text-white/80">{game.description}</p>
+          </div>
+        ))}
       </div>
 
-      <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <button
+        onClick={toggleSidebar}
+        className="bg-purple-500 text-white rounded px-4 py-2 mb-4"
+      >
+        {sidebarVisible ? '←' : '→'}
+      </button>
+
+      <div className={`flex-1 grid gap-10 md:grid-cols-2 lg:grid-cols-3 transition-all ${sidebarVisible ? '' : 'ml-0'}`}>
         {filteredGames.map((game) => (
           <div
             key={game.title}
@@ -197,61 +183,30 @@ function Games() {
       </div>
 
       {popup.open && (
-        <div className="fixed inset-0 z-50 w-screen h-screen flex items-stretch justify-stretch bg-black bg-opacity-90 backdrop-blur-xl">
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
           <div
             id="popup"
-            className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden"
-            style={{ margin: 0 }}
+            className="bg-black rounded-lg shadow-lg p-4 w-full h-full relative overflow-hidden"
+            style={{
+              margin: "10px",
+              overflowY: "hidden", // Hide scrollbar
+            }}
           >
-            <button
-              onClick={closePopup}
-              className="absolute top-5 left-5 z-10 bg-red-600 hover:bg-red-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-3xl transition"
-              aria-label="Close popup"
-              type="button"
-            >
+            <button onClick={closePopup} className="text-red-500 absolute top-2 left-4 z-10 text-3xl">
               &times;
             </button>
-            <div className="flex-1 flex flex-col md:flex-row w-full h-full pt-10 md:pt-0">
-              <div className="md:w-1/3 w-full flex flex-col items-center justify-center py-8 px-4 bg-black bg-opacity-10">
-                <img
-                  src={popup.game?.image}
-                  alt={popup.game?.title}
-                  className="w-36 h-36 rounded-lg shadow-md object-contain mb-5 border border-white/10"
-                  draggable="false"
-                />
-                <h2 className="text-2xl font-bold font-head mb-2 text-white text-center drop-shadow-sm">
-                  {popup.game?.title}
-                </h2>
-                <p className="text-white/80 text-center mb-2">
-                  {popup.game?.description}
-                </p>
-              </div>
-              <div className="flex-1 relative w-full h-full">
-                <iframe
-                  src={popup.game?.url}
-                  title={popup.game?.title}
-                  className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
-                  allowFullScreen
-                />
-                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
-                  <button
-                    onClick={toggleFullscreen}
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                    type="button"
-                    aria-label="Toggle fullscreen"
-                  >
-                    ⛶ Fullscreen
-                  </button>
-                  <button
-                    onClick={refreshPopup}
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                    type="button"
-                    aria-label="Refresh game"
-                  >
-                    🔄 Refresh
-                  </button>
-                </div>
-              </div>
+            <iframe
+              src={popup.game?.url}
+              title={popup.game?.title}
+              className="w-full h-full border rounded"
+            ></iframe>
+            <div className="absolute bottom-4 right-4 z-10 flex space-x-2">
+              <button onClick={toggleFullscreen} className="bg-purple-500 text-white px-2 py-1 rounded">
+                ⛶
+              </button>
+              <button onClick={refreshPopup} className="bg-blue-500 text-white px-2 py-1 rounded">
+                🔄
+              </button>
             </div>
           </div>
         </div>
