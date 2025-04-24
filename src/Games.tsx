@@ -85,6 +85,13 @@ const GAME_DATA: Game[] = [
       "Play Wordle as many times as you want with unlimited words. Keep guessing and improving your skills!",
     url: "/static/insanity/hvtrs8%2F-wmrflgullkmktgd%2Copg-",
   },
+  {
+    image: "/images/scrapmetal3.svg",
+    title: "Scrap Metal 3",
+    description:
+      "Scrap Metal 3: Infernal Trap is a 3D driving simulator. Player can build his own maps. Place the bridges, ramps and many other obstacles.",
+    url: "/static/insanity/hvtrs8%2F-affpeg3ih2.eivhwb%2Cim%2Frrmjgcvs-sarcpoevan%2Fknfez.jtol",
+  },
 ];
 
 interface PopupState {
