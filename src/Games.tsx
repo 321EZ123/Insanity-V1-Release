@@ -106,24 +106,12 @@ function Games() {
 
   const openPopup = (game: Game) => {
     setPopup({ open: true, game });
-    // Request fullscreen on popup open
-    setTimeout(() => {
-      const popupElement = document.getElementById("popup");
-      if (popupElement && popupElement.requestFullscreen) {
-        popupElement.requestFullscreen().catch(() => {
-          // Ignore errors (e.g. user denied fullscreen)
-        });
-      }
-    }, 0);
   };
 
   const closePopup = () => {
     setPopup({ open: false, game: null });
-    // Exit fullscreen when popup closes
     if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {
-        // Ignore errors
-      });
+      document.exitFullscreen().catch(() => {});
     }
   };
 
@@ -132,13 +120,6 @@ function Games() {
       setPopup({ open: false, game: null });
       setTimeout(() => {
         setPopup({ open: true, game: popup.game });
-        // Request fullscreen again after refresh
-        setTimeout(() => {
-          const popupElement = document.getElementById("popup");
-          if (popupElement && popupElement.requestFullscreen) {
-            popupElement.requestFullscreen().catch(() => {});
-          }
-        }, 0);
       }, 0);
     }
   };
