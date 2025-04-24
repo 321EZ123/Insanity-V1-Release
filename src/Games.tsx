@@ -178,7 +178,7 @@ function Games() {
             className="bg-black rounded-lg shadow-lg p-4 w-full h-full relative overflow-hidden"
             style={{
               margin: "10px",
-              overflowY: "auto", // Enable vertical scrolling for the popup
+              overflowY: "hidden", // Hide scrollbar
             }}
           >
             <button onClick={closePopup} className="text-red-500 absolute top-2 left-4 z-10 text-3xl">
