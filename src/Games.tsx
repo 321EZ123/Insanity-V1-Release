@@ -90,10 +90,11 @@ const GAME_DATA: Game[] = [
 interface PopupState {
   open: boolean;
   game: Game | null;
+  fullscreen: boolean;
 }
 
 function Games() {
-  const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
+  const [popup, setPopup] = useState<PopupState>({ open: false, game: null, fullscreen: false });
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -105,11 +106,11 @@ function Games() {
   }, [popup.open]);
 
   const openPopup = (game: Game) => {
-    setPopup({ open: true, game });
+    setPopup({ open: true, game, fullscreen: false });
   };
 
   const closePopup = () => {
-    setPopup({ open: false, game: null });
+    setPopup({ open: false, game: null, fullscreen: false });
     if (document.fullscreenElement) {
       document.exitFullscreen().catch(() => {});
     }
@@ -117,9 +118,9 @@ function Games() {
 
   const refreshPopup = () => {
     if (popup.game) {
-      setPopup({ open: false, game: null });
+      setPopup({ open: false, game: null, fullscreen: false });
       setTimeout(() => {
-        setPopup({ open: true, game: popup.game });
+        setPopup({ open: true, game: popup.game, fullscreen: false });
       }, 0);
     }
   };
@@ -127,10 +128,14 @@ function Games() {
   const toggleFullscreen = () => {
     const popupElement = document.getElementById("popup");
     if (!popupElement) return;
-    if (!document.fullscreenElement) {
-      popupElement.requestFullscreen().catch(() => {});
+    if (!popup.fullscreen) {
+      popupElement.requestFullscreen().then(() => {
+        setPopup(prev => ({ ...prev, fullscreen: true }));
+      }).catch(() => {});
     } else {
-      document.exitFullscreen().catch(() => {});
+      document.exitFullscreen().then(() => {
+        setPopup(prev => ({ ...prev, fullscreen: false }));
+      }).catch(() => {});
     }
   };
 
@@ -192,7 +197,7 @@ function Games() {
             >
               &times;
             </button>
-            <div className="flex-1 flex flex-col md:flex-row w-full h-full pt-10 md:pt-0">
+            <div className={`flex-1 flex flex-col md:flex-row w-full h-full pt-10 md:pt-0 ${popup.fullscreen ? 'hidden' : ''}`}>
               <div className="md:w-1/3 w-full flex flex-col items-center justify-center py-8 px-4 bg-black bg-opacity-10">
                 <img
                   src={popup.game?.image}
