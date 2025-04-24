@@ -186,7 +186,7 @@ function Games() {
         <div className="fixed inset-0 z-50 w-screen h-screen flex items-stretch justify-stretch bg-black bg-opacity-90 backdrop-blur-xl">
           <div
             id="popup"
-            className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden"
+            className={`relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden ${popup.fullscreen ? 'flex' : 'flex-col'}`}
             style={{ margin: 0 }}
           >
             <button
@@ -197,7 +197,7 @@ function Games() {
             >
               &times;
             </button>
-            <div className={`flex-1 flex flex-col md:flex-row w-full h-full pt-10 md:pt-0 ${popup.fullscreen ? 'hidden' : ''}`}>
+            <div className={`flex-1 flex flex-col md:flex-row w-full h-full ${popup.fullscreen ? 'hidden' : ''}`}>
               <div className="md:w-1/3 w-full flex flex-col items-center justify-center py-8 px-4 bg-black bg-opacity-10">
                 <img
                   src={popup.game?.image}
@@ -219,26 +219,40 @@ function Games() {
                   className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
                   allowFullScreen
                 />
-                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
-                  <button
-                    onClick={toggleFullscreen}
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                    type="button"
-                    aria-label="Toggle fullscreen"
-                  >
-                    ⛶ Fullscreen
-                  </button>
-                  <button
-                    onClick={refreshPopup}
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                    type="button"
-                    aria-label="Refresh game"
-                  >
-                    🔄 Refresh
-                  </button>
-                </div>
               </div>
             </div>
+            {popup.fullscreen && (
+              <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
+                <button
+                  onClick={toggleFullscreen}
+                  className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                  type="button"
+                  aria-label="Exit fullscreen"
+                >
+                  Exit Fullscreen
+                </button>
+                <button
+                  onClick={refreshPopup}
+                  className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                  type="button"
+                  aria-label="Refresh game"
+                >
+                  🔄 Refresh
+                </button>
+              </div>
+            )}
+            {!popup.fullscreen && (
+              <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
+                <button
+                  onClick={toggleFullscreen}
+                  className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                  type="button"
+                  aria-label="Toggle fullscreen"
+                >
+                  ⛶ Fullscreen
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
