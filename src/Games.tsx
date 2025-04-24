@@ -92,6 +92,13 @@ const GAME_DATA: Game[] = [
       "Scrap Metal 3: Infernal Trap is a 3D driving simulator. Player can build his own maps. Place the bridges, ramps and many other obstacles.",
     url: "/static/insanity/hvtrs8%2F-affpeg3ih2.eivhwb%2Cim%2Frrmjgcvs-sarcpoevan%2Fknfez.jtol",
   },
+  {
+    image: "/images/scrapmetal6.svg",
+    title: "Scrap Metal 6",
+    description:
+      "Scrap Metal 6 is a free to play open world, build your own adventure driving game.",
+    url: "/static/insanity/hvtrs8%2F-wuw%2Cjmpk.aoo%2Feaoe-gcmg%2Fqcpar-oevan-4%2F",
+  },
 ];
 
 interface PopupState {
