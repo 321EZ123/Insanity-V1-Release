@@ -90,11 +90,10 @@ const GAME_DATA: Game[] = [
 interface PopupState {
   open: boolean;
   game: Game | null;
-  fullscreen: boolean;
 }
 
 function Games() {
-  const [popup, setPopup] = useState<PopupState>({ open: false, game: null, fullscreen: false });
+  const [popup, setPopup] = useState<PopupState>({ open: false, game: null });
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -106,21 +105,40 @@ function Games() {
   }, [popup.open]);
 
   const openPopup = (game: Game) => {
-    setPopup({ open: true, game, fullscreen: false });
+    setPopup({ open: true, game });
+    // Request fullscreen on popup open
+    setTimeout(() => {
+      const popupElement = document.getElementById("popup");
+      if (popupElement && popupElement.requestFullscreen) {
+        popupElement.requestFullscreen().catch(() => {
+          // Ignore errors (e.g. user denied fullscreen)
+        });
+      }
+    }, 0);
   };
 
   const closePopup = () => {
-    setPopup({ open: false, game: null, fullscreen: false });
+    setPopup({ open: false, game: null });
+    // Exit fullscreen when popup closes
     if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {});
+      document.exitFullscreen().catch(() => {
+        // Ignore errors
+      });
     }
   };
 
   const refreshPopup = () => {
     if (popup.game) {
-      setPopup({ open: false, game: null, fullscreen: false });
+      setPopup({ open: false, game: null });
       setTimeout(() => {
-        setPopup({ open: true, game: popup.game, fullscreen: false });
+        setPopup({ open: true, game: popup.game });
+        // Request fullscreen again after refresh
+        setTimeout(() => {
+          const popupElement = document.getElementById("popup");
+          if (popupElement && popupElement.requestFullscreen) {
+            popupElement.requestFullscreen().catch(() => {});
+          }
+        }, 0);
       }, 0);
     }
   };
@@ -128,14 +146,10 @@ function Games() {
   const toggleFullscreen = () => {
     const popupElement = document.getElementById("popup");
     if (!popupElement) return;
-    if (!popup.fullscreen) {
-      popupElement.requestFullscreen().then(() => {
-        setPopup(prev => ({ ...prev, fullscreen: true }));
-      }).catch(() => {});
+    if (!document.fullscreenElement) {
+      popupElement.requestFullscreen().catch(() => {});
     } else {
-      document.exitFullscreen().then(() => {
-        setPopup(prev => ({ ...prev, fullscreen: false }));
-      }).catch(() => {});
+      document.exitFullscreen().catch(() => {});
     }
   };
 
@@ -186,7 +200,7 @@ function Games() {
         <div className="fixed inset-0 z-50 w-screen h-screen flex items-stretch justify-stretch bg-black bg-opacity-90 backdrop-blur-xl">
           <div
             id="popup"
-            className={`relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden ${popup.fullscreen ? 'flex' : 'flex-col'}`}
+            className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden"
             style={{ margin: 0 }}
           >
             <button
@@ -197,7 +211,7 @@ function Games() {
             >
               &times;
             </button>
-            <div className={`flex-1 flex flex-col md:flex-row w-full h-full ${popup.fullscreen ? 'hidden' : ''}`}>
+            <div className="flex-1 flex flex-col md:flex-row w-full h-full pt-10 md:pt-0">
               <div className="md:w-1/3 w-full flex flex-col items-center justify-center py-8 px-4 bg-black bg-opacity-10">
                 <img
                   src={popup.game?.image}
@@ -219,40 +233,26 @@ function Games() {
                   className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
                   allowFullScreen
                 />
+                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
+                  <button
+                    onClick={toggleFullscreen}
+                    className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                    type="button"
+                    aria-label="Toggle fullscreen"
+                  >
+                    ⛶ Fullscreen
+                  </button>
+                  <button
+                    onClick={refreshPopup}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                    type="button"
+                    aria-label="Refresh game"
+                  >
+                    🔄 Refresh
+                  </button>
+                </div>
               </div>
             </div>
-            {popup.fullscreen && (
-              <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
-                <button
-                  onClick={toggleFullscreen}
-                  className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                  type="button"
-                  aria-label="Exit fullscreen"
-                >
-                  Exit Fullscreen
-                </button>
-                <button
-                  onClick={refreshPopup}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                  type="button"
-                  aria-label="Refresh game"
-                >
-                  🔄 Refresh
-                </button>
-              </div>
-            )}
-            {!popup.fullscreen && (
-              <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
-                <button
-                  onClick={toggleFullscreen}
-                  className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                  type="button"
-                  aria-label="Toggle fullscreen"
-                >
-                  ⛶ Fullscreen
-                </button>
-              </div>
-            )}
           </div>
         </div>
       )}
