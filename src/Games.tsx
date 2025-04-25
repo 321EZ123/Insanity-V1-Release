@@ -131,11 +131,8 @@ function Games() {
 
   const closePopup = () => {
     setPopup({ open: false, game: null });
-    // Exit fullscreen when popup closes
     if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {
-        // Ignore errors
-      });
+      document.exitFullscreen().catch(() => {});
     }
   };
 
@@ -174,7 +171,7 @@ function Games() {
           placeholder="Search games..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-2 rounded border border-gray-300 bg-black text-white placeholder:text-white"
+          className="w-full p-3 rounded-lg border border-transparent bg-gradient-to-r from-[var(--wope-purple)] to-[var(--wope-blue)] text-white placeholder:text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--wope-lavender)] transition duration-300"
         />
       </div>
 
@@ -218,12 +215,7 @@ function Games() {
             </button>
             <div className="flex-1 flex flex-col md:flex-row w-full h-full pt-10 md:pt-0">
               <div className="md:w-1/3 w-full flex flex-col items-center justify-center py-8 px-4 bg-black bg-opacity-10">
-                <img
-                  src={popup.game?.image}
-                  alt={popup.game?.title}
-                  className="w-36 h-36 rounded-lg shadow-md object-contain mb-5 border border-white/10"
-                  draggable="false"
-                />
+                {/* Image removed from here */}
               </div>
               <div className="flex-1 relative w-full h-full">
                 <iframe
