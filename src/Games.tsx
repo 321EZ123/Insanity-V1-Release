@@ -29,7 +29,83 @@ const GAME_DATA: Game[] = [
       "Bake billions of cookies in this endless clicker—build a cookie empire with upgrades, achievements, and more!",
     url: "/static/insanity/hvtrs8%2F-cmoiigcniakgr%2Ceg%2F",
   },
-  // ... (the rest of your game data)
+  {
+    image: "/images/tetris.svg",
+    title: "Tetris",
+    description:
+      "Stack and rotate tetriminos to clear rows—how long can you survive the classic puzzle challenge?",
+    url: "/static/insanity/hvtrs8%2F-dhbnug.eivhwb%2Cim%2Fvevrks-",
+  },
+  {
+    image: "/images/retrobowl-custom.png",
+    title: "Retro Bowl",
+    description:
+      "Take control as coach in this throwback football game—draft, manage, and play your way to the Retro Bowl!",
+    url: "/static/insanity/hvtrs8%2F-rgtpo%60oulwnnoakgd%2Cgktju%60.ko-",
+  },
+  {
+    image: "/images/subway-surfers-custom.png",
+    title: "Subway Surfers",
+    description:
+      "Dash, dodge, and collect in one of the most popular endless runner games. How far can you go?",
+    url: "/static/insanity/hvtrs8%2F-etinmmnie%2Cgktju%60.ko-gcmgs-swbua%7B-qupfgrq%2F",
+  },
+  {
+    image: "/images/snowrider3d-custom.png",
+    title: "Snow Rider 3D",
+    description:
+      "Experience the thrill of snowboarding down beautiful mountains in this exciting 3D adventure!",
+    url: "/static/insanity/hvtrs8%2F-dpirp%7B-aav.eivhwb%2Cim%2Fqnmwpifep3F%2F",
+  },
+  {
+    image: "/images/bitlife-custom.png",
+    title: "BitLife",
+    description:
+      "Live your best virtual life in BitLife, where every decision you make shapes your character's future!",
+    url: "/static/insanity/hvtrs8%2F-meantgrlavite%2Cgktju%60.ko-p-bktnide%2Chvmn",
+  },
+  {
+    image: "/images/blockblast-custom.png",
+    title: "Block Blast",
+    description:
+      "Match and blast blocks in this fun and addictive puzzle game. Clear the board and score high!",
+    url: "/static/insanity/hvtrs8%2F-rgulbmzfo%2Cgktju%60.ko-",
+  },
+  {
+    image: "/images/wordle-custom.png",
+    title: "Wordle",
+    description:
+      "Guess the hidden five-letter word in six attempts. Use your vocabulary skills to solve the puzzle!",
+    url: "/static/insanity/hvtrs8%2F-wuw%2Cn%7Btkmgs%2Ccmm-gcmgs-wmrflg%2Fknfez.jtol",
+  },
+  {
+    image: "/images/wordleunlimited-custom.png",
+    title: "Wordle Unlimited",
+    description:
+      "Play Wordle as many times as you want with unlimited words. Keep guessing and improving your skills!",
+    url: "/static/insanity/hvtrs8%2F-wmrflgullkmktgd%2Copg-",
+  },
+  {
+    image: "/images/scrapmetal3.svg",
+    title: "Scrap Metal 3",
+    description:
+      "Scrap Metal 3: Infernal Trap is a 3D driving simulator. Player can build his own maps. Place the bridges, ramps and many other obstacles.",
+    url: "/static/insanity/hvtrs8%2F-affpeg3ih2.eivhwb%2Cim%2Frrmjgcvs-sarcpoevan%2Fknfez.jtol",
+  },
+  {
+    image: "/images/scrapmetal6.svg",
+    title: "Scrap Metal 6",
+    description:
+      "Scrap Metal 6 is a free to play open world, build your own adventure driving game.",
+    url: "/static/insanity/hvtrs8%2F-wuw%2Cjmpk.aoo%2Feaoe-gcmg%2Fqcpar-oevan-4%2F",
+  },
+  {
+    image: "/images/kourio.svg",
+    title: "Kour.io",
+    description:
+      "Kour.io is a multiplayer IO FPS game that plunges you into intense battles across various maps with many guns and modes to play!",
+    url: "/static/insanity/hvtrs8%2F-kmup.ko-%23KZGLC1",
+  },
 ];
 
 interface PopupState {
