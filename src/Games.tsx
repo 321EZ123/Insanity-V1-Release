@@ -106,6 +106,13 @@ const GAME_DATA: Game[] = [
       "Kour.io is a multiplayer IO FPS game that plunges you into intense battles across various maps with many guns and modes to play!",
     url: "/static/insanity/hvtrs8%2F-kmup.ko-%23KZGLC1",
   },
+  {
+    image: "/images/basketballstars.svg",
+    title: "Basketball Stars",
+    description:
+      "Basketball Stars is a basketball game where you join in thrilling matches right on your device. Choose your favorite legendary and kick off all opponents!",
+    url: "/static/insanity/hvtrs8%2F-ulbnoakgd%2Fgcmgs%2Cs1.cmczmncwq.aoo%2F%60aqkgt%60anl%2Fsvaps%2Chvmn",
+  },
 ];
 
 interface PopupState {
