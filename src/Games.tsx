@@ -213,10 +213,7 @@ function Games() {
             >
               &times;
             </button>
-            <div className="flex-1 flex flex-col md:flex-row w-full h-full pt-10 md:pt-0">
-              <div className="md:w-1/3 w-full flex flex-col items-center justify-center py-8 px-4 bg-black bg-opacity-10">
-                {/* Image removed from here */}
-              </div>
+            <div className="flex-1 flex flex-col w-full h-full">
               <div className="flex-1 relative w-full h-full">
                 <iframe
                   src={popup.game?.url}
