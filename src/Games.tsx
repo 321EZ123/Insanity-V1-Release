@@ -127,15 +127,6 @@ function Games() {
 
   const openPopup = (game: Game) => {
     setPopup({ open: true, game });
-    // Request fullscreen on popup open
-    setTimeout(() => {
-      const popupElement = document.getElementById("popup");
-      if (popupElement && popupElement.requestFullscreen) {
-        popupElement.requestFullscreen().catch(() => {
-          // Ignore errors (e.g. user denied fullscreen)
-        });
-      }
-    }, 0);
   };
 
   const closePopup = () => {
@@ -153,13 +144,6 @@ function Games() {
       setPopup({ open: false, game: null });
       setTimeout(() => {
         setPopup({ open: true, game: popup.game });
-        // Request fullscreen again after refresh
-        setTimeout(() => {
-          const popupElement = document.getElementById("popup");
-          if (popupElement && popupElement.requestFullscreen) {
-            popupElement.requestFullscreen().catch(() => {});
-          }
-        }, 0);
       }, 0);
     }
   };
@@ -240,12 +224,6 @@ function Games() {
                   className="w-36 h-36 rounded-lg shadow-md object-contain mb-5 border border-white/10"
                   draggable="false"
                 />
-                <h2 className="text-2xl font-bold font-head mb-2 text-white text-center drop-shadow-sm">
-                  {popup.game?.title}
-                </h2>
-                <p className="text-white/80 text-center mb-2">
-                  {popup.game?.description}
-                </p>
               </div>
               <div className="flex-1 relative w-full h-full">
                 <iframe
