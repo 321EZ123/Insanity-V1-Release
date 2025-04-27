@@ -12,7 +12,7 @@ const GAME_DATA: Game[] = [
     image: "/images/Llama3-8B-8192.png",
     title: "Llama3-8B-8192",
     description:
-      "Llama-3-8B-8192 delivers great performance with industry-leading speed and cost-efficiency on Groq hardware.",
+      "Llama3-8B-8192 is a variant of the LLaMA (Large Language Model Meta AI) series, specifically the third generation with 8 billion parameters and a context window of 8192 tokens. This model is designed to be more efficient and capable of handling larger contexts, making it suitable for a variety of natural language processing tasks, including conversation, summarization, and content generation.",
     url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak.jtol",
   },
 ];
