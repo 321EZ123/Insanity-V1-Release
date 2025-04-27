@@ -93,21 +93,21 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-affpeg3ih2.eivhwb%2Cim%2Frrmjgcvs-sarcpoevan%2Fknfez.jtol",
   },
   {
-    image: "/images/scrapmetal6.svg",
+    image: "/images/scrapmetal6.jpg",
     title: "Scrap Metal 6",
     description:
       "Scrap Metal 6 is a free to play open world, build your own adventure driving game.",
     url: "/static/insanity/hvtrs8%2F-wuw%2Cjmpk.aoo%2Feaoe-gcmg%2Fqcpar-oevan-4%2F",
   },
   {
-    image: "/images/kourio.svg",
+    image: "/images/kourio.webp",
     title: "Kour.io",
     description:
       "Kour.io is a multiplayer IO FPS game that plunges you into intense battles across various maps with many guns and modes to play!",
     url: "/static/insanity/hvtrs8%2F-kmup.ko-%23KZGLC1",
   },
   {
-    image: "/images/basketballstars.svg",
+    image: "/images/basketballstars.avif",
     title: "Basketball Stars",
     description:
       "Basketball Stars is a basketball game where you join in thrilling matches right on your device. Choose your favorite legendary and kick off all opponents!",
