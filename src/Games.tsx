@@ -86,7 +86,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-wmrflgullkmktgd%2Copg-",
   },
   {
-    image: "/images/scrapmetal3.svg",
+    image: "/images/scrapmetal3.jpg",
     title: "Scrap Metal 3",
     description:
       "Scrap Metal 3: Infernal Trap is a 3D driving simulator. Player can build his own maps. Place the bridges, ramps and many other obstacles.",
