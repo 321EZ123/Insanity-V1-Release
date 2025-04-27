@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+//this code is borrowed and modified from the games page
 interface Game {
   image: string;
   title: string;
@@ -8,16 +8,13 @@ interface Game {
 }
 
 const GAME_DATA: Game[] = [
-  // You can copy or adjust the same game data as in Games.tsx, or update for AI specific if desired
-  // Copying exactly from Games.tsx for now
   {
-    image: "/images/slope-custom.png",
-    title: "Slope",
+    image: "/images/Llama3-8B-8192.png",
+    title: "Llama3-8B-8192",
     description:
-      "Dodge obstacles and race down a never-ending 3D slope in this classic hyper-casual reflex game. Simple controls, addicting speed!",
-    url: "/static/insanity/hvtrs8%2F-gcmgdwmr.eivhwb%2Cim%2Fqlmpg%2F",
+      "Llama-3-8B-8192 delivers great performance with industry-leading speed and cost-efficiency on Groq hardware.",
+    url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak.jtol",
   },
-  // ... existing code ... <rest of game data> ...
 ];
 
 interface PopupState {
