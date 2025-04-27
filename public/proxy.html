@@ -191,6 +191,7 @@
     <nav class="center-nav">
       <ul>
         <li><a href="/games" id="games-link">Games</a></li>
+        <li><a href="/ai" id="ai-link">AI</a></li>
         <li><a id="proxy-link" href="/proxy.html" target="_self" rel="noopener noreferrer">Proxy</a></li>
       </ul>
     </nav>
@@ -285,6 +286,10 @@
     if (window.location.pathname.endsWith('/proxy.html')) {
       document.getElementById('proxy-link').classList.remove('active');
       document.getElementById('games-link').classList.remove('active');
+      const aiLink = document.getElementById('ai-link');
+      if (aiLink) {
+        aiLink.classList.remove('active');
+      }
     }
   </script>
 </body>

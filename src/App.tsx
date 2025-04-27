@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Games from "./Games";
 import BrowseUnrestricted from "./BrowseUnrestricted";
+import AI from "./ai";
 
 function App() {
   const location = useLocation();
@@ -44,6 +45,9 @@ function App() {
         <ul className="hidden md:flex gap-8 text-base font-medium">
           <li>
             <Link to="/games" className="hover:text-[var(--wope-purple)] cursor-pointer">Games</Link>
+          </li>
+          <li>
+            <Link to="/ai" className="hover:text-[var(--wope-purple)] cursor-pointer">AI</Link>
           </li>
           <li>
             <a
@@ -176,6 +180,7 @@ function App() {
                 </div>
                 <nav className="flex space-x-8">
                   <Link to="/games" className="hover:text-[var(--wope-purple)] transition">Games</Link>
+                  <Link to="/ai" className="hover:text-[var(--wope-purple)] transition">AI</Link>
                   <a href="/proxy.html" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition">Proxy</a>
                 </nav>
                 <div className="flex space-x-5 mt-5 md:mt-0">
@@ -203,6 +208,7 @@ function App() {
           </>
         } />
         <Route path="/games" element={<Games />} />
+        <Route path="/ai" element={<AI />} />
         <Route path="/browse-unrestricted" element={<BrowseUnrestricted />} />
       </Routes>
     </div>
