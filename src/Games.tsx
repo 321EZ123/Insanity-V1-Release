@@ -30,7 +30,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-cmoiigcniakgr%2Ceg%2F",
   },
   {
-    image: "/images/tetris.svg",
+    image: "/images/tetris.webp",
     title: "Tetris",
     description:
       "Stack and rotate tetriminos to clear rows—how long can you survive the classic puzzle challenge?",
