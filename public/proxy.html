@@ -272,8 +272,6 @@
       const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
       this.textContent = randomQuote;
     });
-
-    // Force reload mechanism for Proxy nav link
     document.getElementById('proxy-link').addEventListener('click', function (e) {
       sessionStorage.setItem('forceReloadProxy', 'true');
     });
@@ -282,7 +280,6 @@
       window.location.reload();
     }
 
-    // Remove 'active' class from both nav links if currently on proxy.html
     if (window.location.pathname.endsWith('/proxy.html')) {
       document.getElementById('proxy-link').classList.remove('active');
       document.getElementById('games-link').classList.remove('active');
