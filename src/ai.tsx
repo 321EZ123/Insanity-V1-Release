@@ -15,6 +15,13 @@ const GAME_DATA: Game[] = [
       "Llama3-8B-8192 is a variant of the LLaMA (Large Language Model Meta AI) series, specifically the third generation with 8 billion parameters and a context window of 8192 tokens. This model is designed to be more efficient and capable of handling larger contexts, making it suitable for a variety of natural language processing tasks, including conversation, summarization, and content generation.",
     url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak.jtol",
   },
+  {
+    image: "/images/Gemma-2-9B-IT.png",
+    title: "Gemma-2-9B-IT",
+    description:
+      "Gemma-2-9B-IT is a sophisticated AI model designed to perform a variety of tasks, including natural language understanding and generation. It excels in processing context, providing coherent responses, and adapting to user needs.",
+    url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak.jtol",
+  },
 ];
 
 interface PopupState {
