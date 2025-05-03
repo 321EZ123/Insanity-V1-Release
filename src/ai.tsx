@@ -44,7 +44,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-6.jtol",
   },
   {
-    image: "/images/Deepseek-R1-Distill-Llama-70B.avif",
+    image: "/images/Deepseek-R1-Distill-Llama-70B.png",
     title: "Deepseek-R1-Distill-Llama-70B",
     description:
       "Deepseek R1 Distill Llama 70B is an optimized, distilled version of the Llama 70B model, designed for efficient performance in natural language processing tasks while maintaining high accuracy and reduced resource requirements.",
