@@ -16,7 +16,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak-3.jtol",
   },
   {
-    image: "/images/Gemma-2-9B-IT.png",
+    image: "/images/Gemma-2-9B-IT.jpg",
     title: "Gemma-2-9B-IT",
     description:
       "Gemma-2-9B-IT is a sophisticated AI model designed to perform a variety of tasks, including natural language understanding and generation. It excels in processing context, providing coherent responses, and adapting to user needs.",
