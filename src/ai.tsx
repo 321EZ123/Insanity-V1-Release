@@ -43,6 +43,13 @@ const GAME_DATA: Game[] = [
       "Llama 3 70B 8192 is a powerful language model with 70 billion parameters and a context length of 8192 tokens, allowing for deep comprehension and generation of complex text over extended interactions.",
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-6.jtol",
   },
+  {
+    image: "/images/Deepseek-R1-Distill-Llama-70B.avif",
+    title: "Deepseek-R1-Distill-Llama-70B",
+    description:
+      "Deepseek R1 Distill Llama 70B is an optimized, distilled version of the Llama 70B model, designed for efficient performance in natural language processing tasks while maintaining high accuracy and reduced resource requirements.",
+    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-7.jtol",
+  },
 ];
 
 interface PopupState {
