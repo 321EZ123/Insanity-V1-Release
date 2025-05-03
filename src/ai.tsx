@@ -88,7 +88,7 @@ function AI() {
     <div className="bg-[var(--wope-bg)] min-h-screen flex flex-col">
       <header className="text-center py-16">
         <h1 className="text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
-          AI Assistant
+          AI Assistants
         </h1>
       </header>
 
