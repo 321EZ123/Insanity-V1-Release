@@ -29,6 +29,13 @@ const GAME_DATA: Game[] = [
       "Llama-3.3-70B-Versatile is a cutting-edge language model with 70 billion parameters, designed for diverse applications and improved performance in understanding and generating human-like text.",
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-0.jtol",
   },
+  {
+    image: "/images/Llama-3.1-8B-Instant.webp",
+    title: "Llama-3.1-8B-Instant",
+    description:
+      "Llama 3.1 8B Instant is a compact language model with 8 billion parameters, optimized for quick responses and efficient performance in various natural language processing tasks.",
+    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-1.jtol",
+  },
 ];
 
 interface PopupState {
