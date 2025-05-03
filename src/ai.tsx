@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-//this code is borrowed and modified from the games page
+
 interface Game {
   image: string;
   title: string;
@@ -12,21 +12,21 @@ const GAME_DATA: Game[] = [
     image: "/images/Llama3-8B-8192.png",
     title: "Llama3-8B-8192",
     description:
-      "Llama3-8B-8192 is a variant of the LLaMA (Large Language Model Meta AI) series, specifically the third generation with 8 billion parameters and a context window of 8192 tokens. This model is designed to be more efficient and capable of handling larger contexts, making it suitable for a variety of natural language processing tasks, including conversation, summarization, and content generation.",
+      "Llama 3 8B 8192 is a variant of the LLaMA series, specifically the third generation with 8 billion parameters and a context window of 8192 tokens...",
     url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak-3.jtol",
   },
   {
     image: "/images/Gemma-2-9B-IT.jpg",
     title: "Gemma-2-9B-IT",
     description:
-      "Gemma-2-9B-IT is a sophisticated AI model designed to perform a variety of tasks, including natural language understanding and generation. It excels in processing context, providing coherent responses, and adapting to user needs.",
+      "Gemma 2 9B IT is a sophisticated AI model designed to perform a variety of tasks, including natural language understanding and generation.",
     url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak.jtol",
   },
   {
     image: "/images/Llama-3.3-70B-Versatile.webp",
     title: "Llama-3.3-70B-Versatile",
     description:
-      "Llama-3.3-70B-Versatile is a cutting-edge language model with 70 billion parameters, designed for diverse applications and improved performance in understanding and generating human-like text.",
+      "Llama 3.3 70B Versatile is a cutting-edge language model with 70 billion parameters, designed for diverse applications and improved performance in understanding and generating human-like text.",
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-0.jtol",
   },
   {
@@ -35,6 +35,13 @@ const GAME_DATA: Game[] = [
     description:
       "Llama 3.1 8B Instant is a compact language model with 8 billion parameters, optimized for quick responses and efficient performance in various natural language processing tasks.",
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-1.jtol",
+  },
+  {
+    image: "/images/Llama-3-70B-8192.webp",
+    title: "Llama-3-70B-8192",
+    description:
+      "Llama 3 70B 8192 is a powerful language model with 70 billion parameters and a context length of 8192 tokens, allowing for deep comprehension and generation of complex text over extended interactions.",
+    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-6.jtol",
   },
 ];
 
@@ -164,16 +171,18 @@ function AI() {
         </div>
       )}
 
-      <div className="text-center mt-10">
-        <a
-          href="/proxy.html"
-          target="_self"
-          rel="noopener noreferrer"
-          className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md"
-        >
-          Go to Proxy
-        </a>
-      </div>
+      <nav className="bg-gray-800 p-4">
+        <div className="text-center">
+          <a
+            href="/proxy.html"
+            target="_self" // Ensure it opens in the same tab
+            rel="noopener noreferrer"
+            className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md"
+          >
+            Proxy
+          </a>
+        </div>
+      </nav>
     </div>
   );
 }
