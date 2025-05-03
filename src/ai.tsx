@@ -23,7 +23,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak.jtol",
   },
   {
-    image: "/images/Llama-3.3-70B-Versatile.jpg",
+    image: "/images/Llama-3.3-70B-Versatile.webp",
     title: "Llama-3.3-70B-Versatile",
     description:
       "Llama-3.3-70B-Versatile is a cutting-edge language model with 70 billion parameters, designed for diverse applications and improved performance in understanding and generating human-like text.",
