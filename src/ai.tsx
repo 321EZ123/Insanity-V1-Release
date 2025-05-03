@@ -22,6 +22,13 @@ const GAME_DATA: Game[] = [
       "Gemma-2-9B-IT is a sophisticated AI model designed to perform a variety of tasks, including natural language understanding and generation. It excels in processing context, providing coherent responses, and adapting to user needs.",
     url: "/static/insanity/hvtrs8%2F-ilscnkt%7B-ci%2Cngtnidy%2Carp-ak.jtol",
   },
+  {
+    image: "/images/Llama-3.3-70B-Versatile.jpg",
+    title: "Llama-3.3-70B-Versatile",
+    description:
+      "Llama-3.3-70B-Versatile is a cutting-edge language model with 70 billion parameters, designed for diverse applications and improved performance in understanding and generating human-like text.",
+    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-0.jtol",
+  },
 ];
 
 interface PopupState {
