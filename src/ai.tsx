@@ -37,7 +37,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-1.jtol",
   },
   {
-    image: "/images/Llama-3-70B-8192.webp",
+    image: "/images/Llama-3-70B-8192.avif",
     title: "Llama-3-70B-8192",
     description:
       "Llama 3 70B 8192 is a powerful language model with 70 billion parameters and a context length of 8192 tokens, allowing for deep comprehension and generation of complex text over extended interactions.",
