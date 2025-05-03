@@ -186,7 +186,7 @@ function AI() {
             rel="noopener noreferrer"
             className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md"
           >
-            Proxy
+            Go to Proxy
           </a>
         </div>
       </nav>
