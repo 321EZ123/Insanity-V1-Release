@@ -86,7 +86,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-30%2Chvmn",
   },
   {
-    image: "/images/Compound-Beta-Mini.webp",
+    image: "/images/Compound-Beta-Mini.png",
     title: "Compound-Beta-Mini",
     description:
       "Compound Beta Mini AI for Groq is a streamlined version of the Compound Beta framework, specifically tailored for efficient performance in smaller-scale machine learning tasks while maintaining the high-speed processing capabilities of Groq's architecture.",
