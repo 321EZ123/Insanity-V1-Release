@@ -50,14 +50,7 @@ function App() {
             <Link to="/ai" className="hover:text-[var(--wope-purple)] cursor-pointer">AI</Link>
           </li>
           <li>
-            <a
-              href="/proxy.html"
-              className="hover:text-[var(--wope-purple)] cursor-pointer"
-              target={isProxyPage ? "_self" : "_blank"}
-              rel="noopener noreferrer"
-            >
-              Proxy
-            </a>
+            <Link to="/browse-unrestricted" className="hover:text-[var(--wope-purple)] cursor-pointer">Proxy</Link>
           </li>
         </ul>
         <div className="flex gap-3">
@@ -165,7 +158,7 @@ function App() {
                   </p>
                 </div>
                 <a
-                  href="/proxy.html"
+                  href="/browse-unrestricted"
                   className="rounded-lg px-8 py-4 font-bold bg-white text-[var(--wope-purple)] hover:bg-[var(--wope-lavender)] transition text-lg shadow-xl"
                 >
                   Use Proxy
@@ -181,7 +174,7 @@ function App() {
                 <nav className="flex space-x-8">
                   <Link to="/games" className="hover:text-[var(--wope-purple)] transition">Games</Link>
                   <Link to="/ai" className="hover:text-[var(--wope-purple)] transition">AI</Link>
-                  <a href="/proxy.html" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition">Proxy</a>
+                  <Link to="/browse-unrestricted" className="hover:text-[var(--wope-purple)] transition">Proxy</Link>
                 </nav>
                 <div className="flex space-x-5 mt-5 md:mt-0">
                   <a href="https://discord.com/invite/Gv4rVt2SJp" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition" aria-label="Discord">

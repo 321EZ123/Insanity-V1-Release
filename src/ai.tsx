@@ -57,41 +57,7 @@ const GAME_DATA: Game[] = [
       "Llama 4 Maverick 17B 128E Instruct is Meta's natively multimodal model that enables text and image understanding. Image support coming soon.",
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-4.jtol",
   },
-  {
-    image: "/images/Llama-4-Scout-17B-16E-Instruct.webp",
-    title: "Llama-4-Scout-17B-16E-Instruct",
-    description:
-      "Llama 4 Scout 17B 16E Instruct is an advanced AI model designed for enhanced instruction-following capabilities, featuring 17 billion parameters and optimized for efficient learning and response generation.",
-    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-5.jtol",
-  },
-  {
-    image: "/images/Mistral-Saba-24B.png",
-    title: "Mistral-Saba-24B",
-    description:
-      "Mistral-Saba-24B is a powerful AI language model with 24 billion parameters, optimized for high-performance natural language processing and generation tasks.",
-    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-%3A.jtol",
-  },
-  {
-    image: "/images/Qwen-QWQ-32B.png",
-    title: "Qwen-QWQ-32B",
-    description:
-      "Qwen QwQ 32B is a 32-billion parameter reasoning model developed by Alibaba's Qwen team that is designed to excel at complex reasoning and problem-solving tasks.",
-    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-%3B.jtol",
-  },
-  {
-    image: "/images/Compound-Beta.webp",
-    title: "Compound-Beta",
-    description:
-      "Compound Beta AI for Groq is a cutting-edge framework designed to optimize machine learning workflows, leveraging Groq's architecture for high-speed processing and efficiency in complex computations.",
-    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-30%2Chvmn",
-  },
-  {
-    image: "/images/Compound-Beta-Mini.png",
-    title: "Compound-Beta-Mini",
-    description:
-      "Compound Beta Mini AI for Groq is a streamlined version of the Compound Beta framework, specifically tailored for efficient performance in smaller-scale machine learning tasks while maintaining the high-speed processing capabilities of Groq's architecture.",
-    url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-31%2Chvmn",
-  },
+  
 ];
 
 interface PopupState {
