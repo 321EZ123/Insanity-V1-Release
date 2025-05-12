@@ -24,7 +24,7 @@ Welcome to **Insanity**! This project provides users with proxy services, AI too
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/yourusername/insanity.git
-   cd insanity
+   cd Insanity-V1-Release
    ```
 
 2. **Install Dependencies** (if applicable):
