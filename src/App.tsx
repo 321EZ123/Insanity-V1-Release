@@ -91,7 +91,7 @@ function App() {
                 <div className="group bg-gradient-to-br from-[var(--wope-purple)]/70 to-[var(--wope-blue)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
                   <img src="/images/keyword-tag.png" alt="Auto Keyword Tagging" className="absolute -top-8 -right-8 w-28 opacity-30 group-hover:opacity-60 transition" />
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/images/student.png" alt="Student Icon" className="w-9 h-9" />
+                    <img src="/images/student.png" alt="Student Icon" className="w-9 h-9 object-contain" /> {/* Ensure this uses object-contain */}
                     <span className="font-head text-xl">Anonymous Student</span>
                   </div>
                   <p className="text-sm md:text-base text-white/80 pb-2 font-medium">Insanity is really cool! It's an unblocked game site where I can play games at school, and it's super easy to use. I told my friends about it, and now we all play together during breaks. It's made school a lot more fun and helped me meet more people.</p>
@@ -99,7 +99,7 @@ function App() {
                 <div className="group bg-gradient-to-br from-[var(--wope-bg)]/80 to-[var(--wope-lavender)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
                   <img src="/images/recommendation.png" alt="Recommendation" className="absolute -top-8 right-0 w-28 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/images/employee.png" alt="Employee Icon" className="w-9 h-9" />
+                    <img src="/images/employee.png" alt="Employee Icon" className="w-9 h-9 object-contain" /> {/* Ensure this uses object-contain */}
                     <span className="font-head text-xl">Exhausted Employee</span>
                   </div>
                   <p className="text-sm md:text-base text-white/80 pb-2 font-medium">After long days at work, I've found Insanity to be a great way to unwind. Since it's unblocked, I can easily access it during my breaks. Playing games helps me recharge a bit, and I've even shared it with my colleagues. It's become a nice escape that helps ease the exhaustion of a busy workweek.</p>
@@ -207,8 +207,8 @@ function App() {
         {`
           .image-fit {
             max-width: 100%;
-            height: auto; 
-            object-fit: contain; 
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Use 'contain' to ensure no cropping */
           }
         `}
       </style>
