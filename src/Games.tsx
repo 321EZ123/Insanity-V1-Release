@@ -107,7 +107,7 @@ const GAME_DATA: Game[] = [
     url: "/static/insanity/hvtrs8%2F-kmup.ko-%23KZGLC1",
   },
   {
-    image: "/images/basketballstars.avif",
+    image: "/images/basketballstars.webp",
     title: "Basketball Stars",
     description:
       "Basketball Stars is a basketball game where you join in thrilling matches right on your device. Choose your favorite legendary and kick off all opponents!",
