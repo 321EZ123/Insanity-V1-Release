@@ -108,7 +108,7 @@ function App() {
                 <div className="group bg-gradient-to-br from-[var(--wope-dark-purple)]/90 to-[var(--wope-purple)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
                   <img src="/images/traffic-estimation.png" alt="Traffic Estimation" className="absolute -top-8 -left-8 w-32 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/images/traffic-icon.png" alt="Traffic Icon" className="w-9 h-9" />
+                    <img src="/images/website-owner.png" alt="Website Owner Icon" className="w-9 h-9" />
                     <span className="font-head text-xl">Fellow Website Owner</span>
                   </div>
                   <p className="text-sm md:text-base text-white/80 pb-2 font-medium">As a fellow site owner, I truly admire Insanity. My site is dynamic, but Insanity excels as a static website. It's well-designed and offers a fantastic user experience. It's impressive to see how a simpler format can still deliver so much value!</p>
