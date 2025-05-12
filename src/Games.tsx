@@ -113,6 +113,13 @@ const GAME_DATA: Game[] = [
       "Basketball Stars is a basketball game where you join in thrilling matches right on your device. Choose your favorite legendary and kick off all opponents!",
     url: "/static/insanity/hvtrs8%2F-ulbnoakgd%2Fgcmgs%2Cs1.cmczmncwq.aoo%2F%60aqkgt%60anl%2Fsvaps%2Chvmn",
   },
+  {
+    image: "/images/slowroads.jpg",
+    title: "Slow Roads",
+    description:
+      "Slow Roads is a casual driving game all about finding peace in a long, scenic journey. No ads, no interruptions, and no end to the road.",
+    url: "/static/insanity/hvtrs8%2F-ulbnoakgd%2Fgcmgs%2Cs1.cmczmncwq.aoo%2Fqlmw%2Frmafs%2Chvmn",
+  },
 ];
 
 interface PopupState {
