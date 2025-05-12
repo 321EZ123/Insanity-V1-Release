@@ -108,7 +108,7 @@ function App() {
                 <div className="group bg-gradient-to-br from-[var(--wope-dark-purple)]/90 to-[var(--wope-purple)]/80 rounded-2xl p-7 shadow-xl hover:scale-[1.03] hover:shadow-2xl transition overflow-hidden cursor-pointer relative">
                   <img src="/images/traffic-estimation.png" alt="Traffic Estimation" className="absolute -top-8 -left-8 w-32 opacity-20 group-hover:opacity-50 transition" />
                   <div className="flex items-center gap-3 mb-4">
-                    <img src="/images/website-owner.png" alt="Website Owner Icon" className="w-9 h-9" />
+                    <img src="/images/website-owner.png" alt="Website Owner Icon" className="w-9 h-9 image-fit" />
                     <span className="font-head text-xl">Fellow Website Owner</span>
                   </div>
                   <p className="text-sm md:text-base text-white/80 pb-2 font-medium">As a fellow site owner, I truly admire Insanity. My site is dynamic, but Insanity excels as a static website. It's well-designed and offers a fantastic user experience. It's impressive to see how a simpler format can still deliver so much value!</p>
@@ -184,7 +184,7 @@ function App() {
                   </a>
                   <a href="https://github.com/321EZ123/Insanity-V1-Release" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--wope-purple)] transition" aria-label="GitHub">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.867 8.181 6.839 9.504.5.089.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.609.069-.609 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.914.832.092-.647.349-1.088.634-1.34-2.221-.253-4.555-1.113-4.555-4.951 0-1.094.39-1.991 1.029-2.693-.103-.254-.447-1.273.098-2.653 0 0 .841-.27 2.75 1.025A9.523 9.523 0 0 1 12 6.843a9.6 9.6 0 0 1 2.504.337c1.909-1.296 2.749-1.025 2.749-1.025.546 1.38.203 2.399.1 2.653.64.702 1.029 1.599 1.029 2.693 0 3.847-2.337 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.013 2.418-.013 2.747 0 .268.18.576.688.478A10.025 10.025 0 0 0 22 12.021C22 6.484 17.523 2 12 2z"/>
+                      <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.867 8.181 6.839 9.504.5.089.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342.454-1.158-1.11-1.467-1.11-1.467-.908-.621.069-.609.069-.609 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.914.832.092-.647.349-1.088.634-1.34-2.221-.253-4.555-1.113-4.555-4.951 0-1.094.39-1.991 1.029-2.693-.103-.254-.447-1.273.098-2.653 0 0 .841-.27 2.75 1.025A9.523 9.523 0 0 1 12 6.843a9.6 9.6 0 0 1 2.504.337c1.909-1.296 2.749-1.025 2.749-1.025.546 1.38.203 2.399.1 2.653.64.702 1.029 1.599 1.029 2.693 0 3.847-2.337 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.013 2.418-.013 2.747 0 .268.18.576.688.478A10.025 10.025 0 0 0 22 12.021C22 6.484 17.523 2 12 2z"/>
                     </svg>
                   </a>
                   <Link to="/" className="hover:text-[var(--wope-purple)] transition" aria-label="YouTube">
@@ -204,6 +204,15 @@ function App() {
         <Route path="/ai" element={<AI />} />
         <Route path="/browse-unrestricted" element={<BrowseUnrestricted />} />
       </Routes>
+      <style>
+        {`
+          .image-fit {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* or 'contain' depending on your needs */
+          }
+        `}
+      </style>
     </div>
   );
 }
