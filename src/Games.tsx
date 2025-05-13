@@ -261,7 +261,7 @@ function Games() {
 
       <div className="text-center mt-10">
         <a
-          href="/proxy.html"
+          href="/browse-unrestricted"
           target="_self"
           rel="noopener noreferrer"
           className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md"
