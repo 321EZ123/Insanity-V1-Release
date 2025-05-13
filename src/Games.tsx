@@ -120,6 +120,13 @@ const GAME_DATA: Game[] = [
       "Slow Roads is a casual driving game all about finding peace in a long, scenic journey. No ads, no interruptions, and no end to the road.",
     url: "/static/insanity/hvtrs8%2F-ulbnoakgd%2Fgcmgs%2Cs1.cmczmncwq.aoo%2Fqlmw%2Frmafs%2Chvmn",
   },
+  {
+    image: "/images/deal-or-no-deal.jpg",
+    title: "Deal or No Deal",
+    description:
+      "Try your luck in finding the $1,000,000 briefcase in the only officially licensed casual game based on the hit TV game show!",
+    url: "/static/insanity/hvtrs8%2F-wuw%2Cmqn%2Ccmm-el-ws-pna%7B%2Feaoeq%2Ffecl%2Fop-lo%2Fdgan%2Fag%2F9owqg76szemi",
+  },
 ];
 
 interface PopupState {
