@@ -189,7 +189,7 @@ function AI() {
       <nav className="bg-gray-800 p-4">
         <div className="text-center">
           <a
-            href="/proxy.html"
+            href="/browse-unrestricted"
             target="_self" // Ensure it opens in the same tab
             rel="noopener noreferrer"
             className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md"
