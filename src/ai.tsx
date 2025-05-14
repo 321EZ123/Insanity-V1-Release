@@ -57,7 +57,6 @@ const GAME_DATA: Game[] = [
       "Llama 4 Maverick 17B 128E Instruct is Meta's natively multimodal model that enables text and image understanding. Image support coming soon.",
     url: "/static/insanity/hvtrs8%2F-ak-veqt%2Fscnf-vaw.tepcgl%2Carp-ak-4.jtol",
   },
-  
 ];
 
 interface PopupState {
@@ -186,11 +185,11 @@ function AI() {
         </div>
       )}
 
-      <nav className="bg-gray-800 p-4">
+      <nav className="bg-black p-4">
         <div className="text-center">
           <a
             href="/browse-unrestricted"
-            target="_self" // Ensure it opens in the same tab
+            target="_self"
             rel="noopener noreferrer"
             className="rounded-lg px-5 py-2 font-semibold bg-[var(--wope-purple)] hover:bg-[var(--wope-dark-purple)] transition text-white shadow-md"
           >
