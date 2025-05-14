@@ -12,13 +12,6 @@ Welcome to **Insanity**! This project provides users with proxy services, AI too
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **Cross-Platform Deployment**: Easily deployable on any hosting service or local server.
 
-## Getting Started
-
-### Prerequisites
-
-- Web server (e.g., Apache, Nginx)
-- Node.js (if using JavaScript-based features)
-
 ### Installation
 
 1. **Clone the Repository**:
@@ -31,21 +24,15 @@ Welcome to **Insanity**! This project provides users with proxy services, AI too
    ```bash
    npm install
    ```
-
-3. **Configure the Server**:
-   Set up your web server to serve the files from the project directory.
-
-4. **Deploy**:
-   Deploy Insanity on any platform of your choice, including local servers, cloud services, or static site hosts.
+### Deployment
+Insanity supports mostly all deployment platforms, including Koyeb, Back4App, Vercel, and Netlify.
 
 ### Usage
-
 1. Open your web browser.
 2. Navigate to your deployed site.
 3. Use the proxy services, AI tools, or explore the game site.
 
 ## Contributing
-
 We welcome contributions to Insanity! Please follow these steps:
 
 1. Fork the repository.
