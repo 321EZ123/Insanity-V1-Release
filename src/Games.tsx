@@ -266,7 +266,7 @@ function Games() {
         </div>
       )}
 
-      <div className="text-center mt-10">
+      <div className="text-center mt-10 bg-black p-6">
         <a
           href="/browse-unrestricted"
           target="_self"
