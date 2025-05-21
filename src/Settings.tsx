@@ -205,7 +205,7 @@ export default function Settings() {
 
       {/* Credits Box */}
       <div
-        className="bg-[#0d0d0d] border border-gray-700 rounded-lg shadow-lg p-6 mt-4 mx-4 mb-8" // Added mb-8 for extra space below
+        className="bg-[#0d0d0d] border border-gray-700 rounded-lg shadow-lg p-6 mt-4 mx-4 mb-8"
         style={{ width: "calc(100% - 32px)" }} 
       >
         <div className="p-4 flex flex-col items-center w-full">
@@ -219,7 +219,8 @@ export default function Settings() {
             - Proxy Technology: Powered by UV Static by TIW<br />
             - Games: All games belong to their respective owners.<br />
             - Logos & Icons: Some logos and icons, such as the Google logo, belong to their respective owners.<br />
-            - Kudos to Our Partners: Thank you for your support!
+            - Kudos to Our Partners: Thank you for your support!<br />
+            - Special thanks to Benrogo for their bare server for the proxy.
           </p>
         </div>
       </div>
