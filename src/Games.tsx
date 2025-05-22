@@ -162,6 +162,13 @@ const GAME_DATA: Game[] = [
       "Doge Miner is an idle clicker game where you mine Dogecoin to reach the moon. You click a pickaxe to mine coins, upgrade your tools, and purchase investments to automate mining and reach your goal of 50,000 Dogecoin for a space rocket.",
     url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-DmggMkngr-ildgx%2Chvmn",
   },
+  {
+    image: "/images/stack.png",
+    title: "Stack",
+    description:
+      "Your goal is to build the highest tower you can. Tap to place a block. Each block you place correctly earns you one point.",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-svaak-ildgx%2Chvmn",
+  },
 ];
 
 interface PopupState {
