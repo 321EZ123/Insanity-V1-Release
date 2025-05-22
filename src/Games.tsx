@@ -148,6 +148,13 @@ const GAME_DATA: Game[] = [
       "Explore the pixelated world mining wood, metals and other objects so that you can craft pickaxes, swords, hats and other items that will help you survive.",
     url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-cpadtoile-ildgx%2Chvmn",
   },
+  {
+    image: "/images/superhot.jpg",
+    title: "SUPERHOT",
+    description:
+      "SUPERHOT is the smash-hit FPS where time moves only when you move. No regenerating health bars. No conveniently placed ammo drops.",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-swpgrjov%2Fknfez.jtol",
+  },
 ];
 
 interface PopupState {
