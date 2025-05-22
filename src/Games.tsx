@@ -127,6 +127,13 @@ const GAME_DATA: Game[] = [
       "Try your luck in finding the $1,000,000 briefcase in the only officially licensed casual game based on the hit TV game show!",
     url: "/static/insanity/hvtrs8%2F-wuw%2Cmqn%2Ccmm-el-ws-pna%7B%2Feaoeq%2Ffecl%2Fop-lo%2Fdgan%2Fag%2F9owqg76szemi",
   },
+  {
+    image: "/images/race-survival.jpg",
+    title: "Race Survival",
+    description:
+      "Survival Race is an intense multiplayer racing game where players battle for supremacy in an unstable arena of crumbling hexagons.",
+    url: "/static/insanity/hvtrs8%2F-wctahfoauoeltcrkeq.aoo%2Fqupvkvcl%2Frccg-eaoe-",
+  },
 ];
 
 interface PopupState {
