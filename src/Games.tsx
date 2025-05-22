@@ -141,6 +141,13 @@ const GAME_DATA: Game[] = [
       "Toss the Turtle is a fun and addictive launch game where you help a daring turtle prove the indestructibility of his shell!",
     url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-tmsqtjevuptne-ildgx%2Chvmn",
   },
+  {
+    image: "/images/craftmine.png",
+    title: "CraftMine",
+    description:
+      "Explore the pixelated world mining wood, metals and other objects so that you can craft pickaxes, swords, hats and other items that will help you survive.",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-cpadtoile-ildgx%2Chvmn",
+  },
 ];
 
 interface PopupState {
