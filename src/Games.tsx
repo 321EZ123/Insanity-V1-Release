@@ -13,7 +13,7 @@ const GAME_DATA: Game[] = [
     title: "Slope",
     description:
       "Dodge obstacles and race down a never-ending 3D slope in this classic hyper-casual reflex game. Simple controls, addicting speed!",
-    url: "/static/insanity/hvtrs8%2F-gcmgdwmr.eivhwb%2Cim%2Fqlmpg%2F",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-snore-ildgx%2Chvmn",
   },
   {
     image: "/images/2048-custom.png",
