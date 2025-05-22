@@ -98,7 +98,6 @@ export default function Settings() {
           </div>
         </div>
 
-        {/* Partners Box */}
         <div
           className="bg-[#0d0d0d] border border-gray-700 rounded-lg shadow-lg p-6"
           style={{ height: "40vh", width: "calc(50% - 20px)", overflow: "auto" }}
@@ -203,7 +202,6 @@ export default function Settings() {
         </div>
       </main>
 
-      {/* Credits Box */}
       <div
         className="bg-[#0d0d0d] border border-gray-700 rounded-lg shadow-lg p-6 mt-4 mx-4 mb-8"
         style={{ width: "calc(100% - 32px)" }} 
@@ -220,7 +218,9 @@ export default function Settings() {
             - Games: All games belong to their respective owners.<br />
             - Logos & Icons: Some logos and icons, such as the Google logo, belong to their respective owners.<br />
             - Kudos to Our Partners: Thank you for your support!<br />
-            - Special thanks to Benrogo for their bare server for the proxy.
+            - Special thanks to Benrogo for their bare server for the proxy.<br />
+            - Thank you to Pi 5 for granting us a bare server until Benrogo is back online.<br />
+            - Some game assets are from 3kh0.
           </p>
         </div>
       </div>
