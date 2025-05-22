@@ -155,6 +155,13 @@ const GAME_DATA: Game[] = [
       "SUPERHOT is the smash-hit FPS where time moves only when you move. No regenerating health bars. No conveniently placed ammo drops.",
     url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-swpgrjov%2Fknfez.jtol",
   },
+  {
+    image: "/images/dogeminer.png",
+    title: "Doge Miner",
+    description:
+      "Doge Miner is an idle clicker game where you mine Dogecoin to reach the moon. You click a pickaxe to mine coins, upgrade your tools, and purchase investments to automate mining and reach your goal of 50,000 Dogecoin for a space rocket.",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-DmggMkngr-ildgx%2Chvmn",
+  },
 ];
 
 interface PopupState {
