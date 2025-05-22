@@ -134,6 +134,13 @@ const GAME_DATA: Game[] = [
       "Survival Race is an intense multiplayer racing game where players battle for supremacy in an unstable arena of crumbling hexagons.",
     url: "/static/insanity/hvtrs8%2F-wctahfoauoeltcrkeq.aoo%2Fqupvkvcl%2Frccg-eaoe-",
   },
+  {
+    image: "/images/toss-the-turtle.png",
+    title: "Toss the Turtle",
+    description:
+      "Toss the Turtle is a fun and addictive launch game where you help a daring turtle prove the indestructibility of his shell!",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-tmsqtjevuptne-ildgx%2Chvmn",
+  },
 ];
 
 interface PopupState {
