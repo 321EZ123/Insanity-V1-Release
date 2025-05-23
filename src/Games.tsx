@@ -169,6 +169,13 @@ const GAME_DATA: Game[] = [
       "Your goal is to build the highest tower you can. Tap to place a block. Each block you place correctly earns you one point.",
     url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-svaak-ildgx%2Chvmn",
   },
+  {
+    image: "/images/tag.jpg",
+    title: "Tag",
+    description:
+      "Tag is a casual multiplayer game that allows up to four friends to compete in a fast-paced game of tag, all on the same device!",
+    url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fvae-0-1-6-rlcygrq%2Fknfez.jtol%3Dv%3F1%2C311",
+  },
 ];
 
 interface PopupState {
