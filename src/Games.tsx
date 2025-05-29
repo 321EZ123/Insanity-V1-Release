@@ -176,6 +176,13 @@ const GAME_DATA: Game[] = [
       "Tag is a casual multiplayer game that allows up to four friends to compete in a fast-paced game of tag, all on the same device!",
     url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fvae-0-1-6-rlcygrq%2Fknfez.jtol%3Dv%3F1%2C311",
   },
+  {
+    image: "/images/deeeep.io.jpg",
+    title: "Deeeep.io",
+    description:
+      "Deeeep.io is a multiplayer online browser game that takes place in the depths of the ocean. Eat food and other players, hide in underwater terrain and evolve your animals to earn points and reach the top of the food chain.",
+    url: "/static/insanity/hvtrs8%2F-p%60gcmgr%2Ccmm-dgeger.ko",
+  },
 ];
 
 interface PopupState {
