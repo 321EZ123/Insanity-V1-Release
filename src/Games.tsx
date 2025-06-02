@@ -183,6 +183,13 @@ const GAME_DATA: Game[] = [
       "Deeeep.io is a multiplayer online browser game that takes place in the depths of the ocean. Eat food and other players, hide in underwater terrain and evolve your animals to earn points and reach the top of the food chain.",
     url: "/static/insanity/hvtrs8%2F-p%60gcmgr%2Ccmm-dgeger.ko",
   },
+  {
+    image: "/images/ragdoll-archers.png",
+    title: "Ragdoll Archers",
+    description:
+      "Ragdoll Archers is an archery game featuring bow and arrow-equipped stickmen with ragdoll physics. Fire arrows at a range of opponents while earning points to upgrade your abilities and ammunition. Play two-player PvP against your friend or team up with them to defeat a range of foes!",
+    url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fpaedmln-crahgrq%2Fknfez.jtol%3Dv%3F1%2C312",
+  },
 ];
 
 interface PopupState {
