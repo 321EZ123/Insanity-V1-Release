@@ -76,5 +76,5 @@ This license is incompatible with:
 - Copyright automatically protected under Berne Convention  
 - Trademark protected under common law rights  
 - Violations actionable without formal registration  
-- Governing law: [Specify Jurisdiction, e.g., United States]  
+- Governing law: United States
 
