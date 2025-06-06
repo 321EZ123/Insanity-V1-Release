@@ -181,7 +181,7 @@ const GAME_DATA: Game[] = [
     title: "Deeeep.io",
     description:
       "Deeeep.io is a multiplayer online browser game that takes place in the depths of the ocean. Eat food and other players, hide in underwater terrain and evolve your animals to earn points and reach the top of the food chain.",
-    url: "/static/insanity/hvtrs8%2F-p%60gcmgr%2Ccmm-dgeger.ko",
+    url: "/static/insanity/hvtrs8%2F-dgeger.ko-",
   },
   {
     image: "/images/ragdoll-archers.png",
