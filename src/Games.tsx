@@ -302,7 +302,7 @@ function Games() {
                       >
                         ⛶ Fullscreen
                       </button>
-                      <button
+                      <button>
                         onClick={refreshPopup}
                         className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
                         type="button"
