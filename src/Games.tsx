@@ -194,7 +194,19 @@ function Games() {
     } else {
       document.body.classList.remove("overflow-hidden");
     }
-  }, [popup.open]);
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isFullscreen) {
+        document.exitFullscreen().catch(() => {});
+        setIsFullscreen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [popup.open, isFullscreen]);
 
   const openPopup = (game: Game) => {
     setPopup({ open: true, game });
@@ -221,8 +233,6 @@ function Games() {
     if (!popupElement) return;
     if (!document.fullscreenElement) {
       popupElement.requestFullscreen().then(() => setIsFullscreen(true)).catch(() => {});
-    } else {
-      document.exitFullscreen().then(() => setIsFullscreen(false)).catch(() => {});
     }
   };
 
@@ -292,24 +302,23 @@ function Games() {
                   className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
                   allowFullScreen
                 />
-                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4"><button
+                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
+                  <button
                     onClick={toggleFullscreen}
                     className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
                     type="button"
                     aria-label="Toggle fullscreen"
                   >
-                    {isFullscreen ? "⏭ Exit Fullscreen" : "⛶ Fullscreen"}
+                    ⛶ Fullscreen
                   </button>
-                  {!isFullscreen && (
-                    <button
-                      onClick={refreshPopup}
-                      className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                      type="button"
-                      aria-label="Refresh game"
-                    >
-                      🔄 Refresh
-                    </button>
-                  )}
+                  <button
+                    onClick={refreshPopup}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                    type="button"
+                    aria-label="Refresh game"
+                  >
+                    🔄 Refresh
+                  </button>
                 </div>
               </div>
             </div>
