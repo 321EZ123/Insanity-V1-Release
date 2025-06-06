@@ -243,49 +243,31 @@ function Games() {
   return (
     <div className="bg-[var(--wope-bg)] min-h-screen flex flex-col">
       <header className="text-center py-16">
-        <h1 className="text-3xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[var(--wope-purple)] via-[var(--wope-blue)] to-[var(--wope-lavender)] bg-clip-text text-transparent">
+        <h1 className="text-3xl md:text-5xl font-bold mb-12">
           Unblocked Games
         </h1>
-        <div className="max-w-6xl mx-auto mb-6">
-          <input
-            type="text"
-            placeholder="Search games..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full p-3 rounded-lg border border-transparent bg-gradient-to-r from-[var(--wope-purple)] to-[var(--wope-blue)] text-white placeholder:text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-[var(--wope-lavender)] transition duration-300"
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="Search games..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full p-3 rounded-lg"
+        />
       </header>
 
       <main className="flex-grow max-w-6xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {filteredGames.map((game) => (
-          <div
-            key={game.title}
-            className="relative rounded-3xl bg-white/5 border border-white/10 shadow-xl backdrop-blur-[6px] flex flex-col items-center px-6 pt-10 pb-8 hover:scale-[1.03] transition overflow-hidden min-h-[480px] group cursor-pointer"
-            onClick={() => openPopup(game)}
-          >
-            <img
-              src={game.image}
-              alt={game.title}
-              className="w-32 h-32 object-contain mb-8 rounded-xl shadow-lg group-hover:scale-105 transition"
-              draggable="false"
-            />
-            <h2 className="font-head text-2xl font-bold mb-3 text-white text-center drop-shadow-sm">
-              {game.title}
-            </h2>
-            <p className="text-white/80 text-base text-center max-w-xs mx-auto">
-              {game.description}
-            </p>
+          <div key={game.title} onClick={() => openPopup(game)} className="relative rounded-3xl bg-white/5 border border-white/10 shadow-xl backdrop-blur-[6px] flex flex-col items-center px-6 pt-10 pb-8 hover:scale-[1.03] transition overflow-hidden min-h-[480px] group cursor-pointer">
+            <img src={game.image} alt={game.title} className="w-32 h-32 object-contain mb-8 rounded-xl shadow-lg group-hover:scale-105 transition" draggable="false" />
+            <h2 className="font-head text-2xl font-bold mb-3 text-white text-center drop-shadow-sm">{game.title}</h2>
+            <p className="text-white/80 text-base text-center max-w-xs mx-auto">{game.description}</p>
           </div>
         ))}
       </main>
 
       {popup.open && (
         <div className="fixed inset-0 z-50 w-screen h-screen flex items-stretch justify-stretch bg-black bg-opacity-90 backdrop-blur-xl">
-          <div
-            id="popup"
-            className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden"
-          >
+          <div id="popup" className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden">
             <button
               onClick={closePopup}
               className="absolute top-5 left-5 z-10 bg-red-600 hover:bg-red-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-3xl transition"
@@ -295,7 +277,7 @@ function Games() {
               &times;
             </button>
             <div className="flex-1 flex flex-col w-full h-full">
-              <div className="flex-1 relative w<div className="flex-1 relative w-full h-full">
+              <div className="flex-1 relative w-full h-full">
                 <iframe
                   src={popup.game?.url}
                   title={popup.game?.title}
@@ -311,8 +293,7 @@ function Games() {
                       aria-label="Toggle fullscreen"
                     >
                       ⛶ Fullscreen
-                    </button>
-                    <button
+                    </button><button
                       onClick={refreshPopup}
                       className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
                       type="button"
