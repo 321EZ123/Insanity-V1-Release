@@ -292,25 +292,23 @@ function Games() {
                   className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
                   allowFullScreen
                 />
-                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
+                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4"><button
+                    onClick={toggleFullscreen}
+                    className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                    type="button"
+                    aria-label="Toggle fullscreen"
+                  >
+                    {isFullscreen ? "⏭ Exit Fullscreen" : "⛶ Fullscreen"}
+                  </button>
                   {!isFullscreen && (
-                    <><button
-                        onClick={toggleFullscreen}
-                        className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                        type="button"
-                        aria-label="Toggle fullscreen"
-                      >
-                        ⛶ Fullscreen
-                      </button>
-                      <button
-                        onClick={refreshPopup}
-                        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                        type="button"
-                        aria-label="Refresh game"
-                      >
-                        🔄 Refresh
-                      </button>
-                    </>
+                    <button
+                      onClick={refreshPopup}
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                      type="button"
+                      aria-label="Refresh game"
+                    >
+                      🔄 Refresh
+                    </button>
                   )}
                 </div>
               </div>
