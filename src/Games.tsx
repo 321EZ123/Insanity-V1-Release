@@ -298,52 +298,52 @@ function Games() {
       </main>
 
       {popup.open && (
-  <div className="fixed inset-0 z-50 w-screen h-screen flex items-stretch justify-stretch bg-black bg-opacity-90 backdrop-blur-xl">
-    <div
-      id="popup"
-      className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden"
-    >
-      <button
-        onClick={closePopup}
-        className="absolute top-5 left-5 z-10 bg-red-600 hover:bg-red-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-3xl transition"
-        aria-label="Close popup"
-        type="button"
-      >
-        &times;
-      </button>
-      
-      <div className="absolute top-5 right-5 z-10 flex gap-4">
-        <button
-          onClick={toggleFullscreen}
-          className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
-          type="button"
-          aria-label="Toggle fullscreen"
-        >
-          ⛶ Fullscreen
-        </button>
-        <button
-          onClick={refreshPopup}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
-          type="button"
-          aria-label="Refresh game"
-        >
-          🔄 Refresh
-        </button>
-      </div>
+        <div className="fixed inset-0 z-50 w-screen h-screen flex items-stretch justify-stretch bg-black bg-opacity-90 backdrop-blur-xl">
+          <div
+            id="popup"
+            className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#23243b] via-[#18192a] to-[#111217] overflow-hidden"
+          >
+            <button
+              onClick={closePopup}
+              className="absolute top-5 left-5 z-10 bg-red-600 hover:bg-red-700 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-3xl transition"
+              aria-label="Close popup"
+              type="button"
+            >
+              &times;
+            </button>
+            
+            <div className="absolute top-5 right-5 z-10 flex gap-4">
+              <button
+                onClick={toggleFullscreen}
+                className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                type="button"
+                aria-label="Toggle fullscreen"
+              >
+                ⛶ Fullscreen
+              </button>
+              <button
+                onClick={refreshPopup}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                type="button"
+                aria-label="Refresh game"
+              >
+                🔄 Refresh
+              </button>
+            </div>
 
-      <div className="flex-1 flex flex-col w-full h-full">
-        <div className="flex-1 relative w-full h-full">
-          <iframe
-            src={popup.game?.url}
-            title={popup.game?.title}
-            className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
-            allowFullScreen
-          />
+            <div className="flex-1 flex flex-col w-full h-full">
+              <div className="flex-1 relative w-full h-full">
+                <iframe
+                  src={popup.game?.url}
+                  title={popup.game?.title}
+                  className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
 
       <div className="text-center mt-10 bg-black p-6">
         <a
