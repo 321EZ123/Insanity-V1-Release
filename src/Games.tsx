@@ -295,31 +295,33 @@ function Games() {
               &times;
             </button>
             <div className="flex-1 flex flex-col w-full h-full">
-              <div className="flex-1 relative w-full h-full">
+              <div className="flex-1 relative w<div className="flex-1 relative w-full h-full">
                 <iframe
                   src={popup.game?.url}
                   title={popup.game?.title}
                   className="absolute top-0 left-0 w-full h-full border-0 rounded-none"
                   allowFullScreen
                 />
-                <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
-                  <button
-                    onClick={toggleFullscreen}
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                    type="button"
-                    aria-label="Toggle fullscreen"
-                  >
-                    ⛶ Fullscreen
-                  </button>
-                  <button
-                    onClick={refreshPopup}
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
-                    type="button"
-                    aria-label="Refresh game"
-                  >
-                    🔄 Refresh
-                  </button>
-                </div>
+                {!isFullscreen && (
+                  <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
+                    <button
+                      onClick={toggleFullscreen}
+                      className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                      type="button"
+                      aria-label="Toggle fullscreen"
+                    >
+                      ⛶ Fullscreen
+                    </button>
+                    <button
+                      onClick={refreshPopup}
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
+                      type="button"
+                      aria-label="Refresh game"
+                    >
+                      🔄 Refresh
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
