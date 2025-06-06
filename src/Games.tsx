@@ -190,6 +190,13 @@ const GAME_DATA: Game[] = [
       "Ragdoll Archers is an archery game featuring bow and arrow-equipped stickmen with ragdoll physics. Fire arrows at a range of opponents while earning points to upgrade your abilities and ammunition. Play two-player PvP against your friend or team up with them to defeat a range of foes!",
     url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fpaedmln-crahgrq%2Fknfez.jtol%3Dv%3F1%2C312",
   },
+  {
+    image: "/images/ovo.png",
+    title: "Ovo",
+    description:
+      "Ovo is a timed stick person-themed platform game developed by Dedra Games. Your goal in this game is to finish as many levels as quickly as you can.",
+    url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fmvm%2Fknfez.jtol%3Dv%3F1%2C312",
+  },
 ];
 
 interface PopupState {
