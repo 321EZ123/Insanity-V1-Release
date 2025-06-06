@@ -294,15 +294,15 @@ function Games() {
                 />
                 <div className="absolute bottom-6 right-6 z-20 flex flex-row-reverse gap-4">
                   {!isFullscreen && (
-                    <>
-                      <buttononClick={toggleFullscreen}
+                    <><button
+                        onClick={toggleFullscreen}
                         className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded shadow transition text-lg"
                         type="button"
                         aria-label="Toggle fullscreen"
                       >
                         ⛶ Fullscreen
                       </button>
-                      <button>
+                      <button
                         onClick={refreshPopup}
                         className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow transition text-lg"
                         type="button"
