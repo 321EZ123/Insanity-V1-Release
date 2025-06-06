@@ -197,6 +197,13 @@ const GAME_DATA: Game[] = [
       "Ovo is a timed stick person-themed platform game developed by Dedra Games. Your goal in this game is to finish as many levels as quickly as you can.",
     url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fmvm%2Fknfez.jtol%3Dv%3F1%2C312",
   },
+  {
+    image: "/images/ovo-online.png",
+    title: "Ovo.io",
+    description:
+      "OvO.io Online is the same as the OvO game you know and love, but now in multiplayer! This is a fast-paced skill-based platforming game focused on maneuvering around the levels as fast as possible. Complete every level available in easy and hard mode. Collect over 40 coins scattered around the levels and unlock a dozen skins and achievements. So, what are you waiting for? Play with your friends!",
+    url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fmvm-mnnile-ildgx%2Chvmn%3Ft%3D3.130",
+  },
 ];
 
 interface PopupState {
