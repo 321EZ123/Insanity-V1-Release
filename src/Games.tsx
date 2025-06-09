@@ -204,6 +204,13 @@ const GAME_DATA: Game[] = [
       "OvO.io Online is the same as the OvO game you know and love, but now in multiplayer! This is a fast-paced skill-based platforming game focused on maneuvering around the levels as fast as possible. Complete every level available in easy and hard mode. Collect over 40 coins scattered around the levels and unlock a dozen skins and achievements. So, what are you waiting for? Play with your friends!",
     url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fmvm-mnnile-ildgx%2Chvmn%3Ft%3D3.130",
   },
+  {
+    image: "/images/bloons-td-5.jpg",
+    title: "Bloons TD 5",
+    description:
+      "Play classic Bloons TD5 web. All the features you expect from a great tower defense strategy game. Features include all of your favourite towers from BTD4 with 8 awesome upgrades each instead of 4, and two brand new never before seen tower types.",
+    url: "/static/insanity/hvtrs8%2F-fnaqhouqewm%2Copg-bnomnq-vd%2F5-%23eomgne%5Dvkglevtg",
+  },
 ];
 
 interface PopupState {
