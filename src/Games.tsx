@@ -218,6 +218,13 @@ const GAME_DATA: Game[] = [
       "Bloons Tower Defense is a casual game where your mission is to build and fortify your defenses to stop an ever-growing wave of colorful balloons from reaching the end of the track. This classic game started the legendary Bloons TD series and continues some of the gameplay. You must strategically place a wide variety of units, from dart-throwing monkeys to powerful turrets, and enhance them with upgrades to maximize your popping power. As the levels progress, so do the challenges.",
     url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-bnomnqtf%2Fknfez.jtol",
   },
+  {
+    image: "/images/bloons-td-2.webp",
+    title: "Bloons TD 2",
+    description:
+      "Bloons Tower Defense 2 is a popular tower defense game originally released in Flash by Ninja Kiwi. Strategically place your defenses, upgrade your units, and stop all balloons from passing through.",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-bnomnqtf2-ildgx%2Chvmn",
+  },
 ];
 
 interface PopupState {
