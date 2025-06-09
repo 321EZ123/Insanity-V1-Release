@@ -211,6 +211,13 @@ const GAME_DATA: Game[] = [
       "Play classic Bloons TD5 web. All the features you expect from a great tower defense strategy game. Features include all of your favourite towers from BTD4 with 8 awesome upgrades each instead of 4, and two brand new never before seen tower types.",
     url: "/static/insanity/hvtrs8%2F-fnaqhouqewm%2Copg-bnomnq-vd%2F5-%23eomgne%5Dvkglevtg",
   },
+  {
+    image: "/images/bloons-td.jpg",
+    title: "Bloons TD",
+    description:
+      "Bloons Tower Defense is a casual game where your mission is to build and fortify your defenses to stop an ever-growing wave of colorful balloons from reaching the end of the track. This classic game started the legendary Bloons TD series and continues some of the gameplay. You must strategically place a wide variety of units, from dart-throwing monkeys to powerful turrets, and enhance them with upgrades to maximize your popping power. As the levels progress, so do the challenges.",
+    url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-bnomnqtf%2Fknfez.jtol",
+  },
 ];
 
 interface PopupState {
