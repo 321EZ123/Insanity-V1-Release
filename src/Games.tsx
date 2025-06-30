@@ -225,6 +225,13 @@ const GAME_DATA: Game[] = [
       "Bloons Tower Defense 2 is a popular tower defense game originally released in Flash by Ninja Kiwi. Strategically place your defenses, upgrade your units, and stop all balloons from passing through.",
     url: "/static/insanity/hvtrs8%2F-3ih2-nive%2Cakfms%2Ccn%2Frrmjgcvs-bnomnqtf2-ildgx%2Chvmn",
   },
+  {
+    image: "/images/archer-ragdoll-masters.avif",
+    title: "Archer Ragdoll Master",
+    description:
+      "Archer Ragdoll Masters is a stickman archery action game with ragdoll physics. Line up your arrow and shoot your enemies down one by one. Pick up power-ups and equip new items to your stick archer to own the enemy with greater precision and power.",
+    url: "/static/insanity/hvtrs8%2F-gcmgs%2Ccpaxyeaoeq.aoo%2Fgn%5DUQ%2Fcrahgr%2Frcgfonl%2Fmcsveps-ildgx%2Chvmn%3Ft%3D3.136",
+  },
 ];
 
 interface PopupState {
