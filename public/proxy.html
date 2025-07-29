@@ -194,7 +194,7 @@
     <div class="headline">Browse Unrestricted</div>
     <div class="subtitle" id="quote-generator">Insanity Search</div>
     <div class="search-card">
-      <form id="uv-form" class="search-form" onsubmit="event.preventDefault(); window.location.href = document.getElementById('uv-address').value ? document.getElementById('uv-search-engine').value + encodeURIComponent(document.getElementById('uv-address').value) : '';">
+      <form id="uv-form" class="search-form" onsubmit="event.preventDefault(); window.location.href = document.getElementById('uv-search-engine').value + encodeURIComponent(document.getElementById('uv-address').value);">
         <input id="uv-search-engine" value="https://html.duckduckgo.com/html/?t=h_&q=" type="hidden" />
         <input id="uv-address" type="text" placeholder="Search DuckDuckGo or type a URL" class="form__input" autocomplete="off" />
       </form>
