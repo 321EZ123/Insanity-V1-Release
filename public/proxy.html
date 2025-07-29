@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4YZMV36XQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'G-R4YZMV36XQ');
   </script>
   <meta charset="UTF-8" />
@@ -194,8 +196,8 @@
     <div class="headline">Browse Unrestricted</div>
     <div class="subtitle" id="quote-generator">Insanity Search</div>
     <div class="search-card">
-      <form id="uv-form" class="search-form" onsubmit="event.preventDefault(); window.location.href = document.getElementById('uv-search-engine').value + encodeURIComponent(document.getElementById('uv-address').value);">
-        <input id="uv-search-engine" value="https://html.duckduckgo.com/html/?t=h_&q=" type="hidden" />
+      <form id="uv-form" class="search-form">
+        <input id="uv-search-engine" value="https://yeebsweb.com/search?t=h_&q=%s&ia=web" type="hidden" />
         <input id="uv-address" type="text" placeholder="Search DuckDuckGo or type a URL" class="form__input" autocomplete="off" />
       </form>
     </div>
@@ -266,6 +268,22 @@
       const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
       this.textContent = randomQuote;
     });
+    document.getElementById('proxy-link').addEventListener('click', function (e) {
+      sessionStorage.setItem('forceReloadProxy', 'true');
+    });
+    if (window.location.pathname.endsWith('/proxy.html') && sessionStorage.getItem('forceReloadProxy') === 'true') {
+      sessionStorage.removeItem('forceReloadProxy');
+      window.location.reload();
+    }
+
+    if (window.location.pathname.endsWith('/proxy.html')) {
+      document.getElementById('proxy-link').classList.remove('active');
+      document.getElementById('games-link').classList.remove('active');
+      const aiLink = document.getElementById('ai-link');
+      if (aiLink) {
+        aiLink.classList.remove('active');
+      }
+    }
   </script>
 </body>
 </html>
