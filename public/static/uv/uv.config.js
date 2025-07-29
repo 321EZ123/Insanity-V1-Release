@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/static/insanity/',
-    bare:'https://bare.cbgames.org/',
+    bare:'https://focus-bare-nine.vercel.app/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
