@@ -197,6 +197,9 @@ export default function Settings() {
               <a href="https://sunnys.pro/" target="_blank" rel="noopener noreferrer" className="m-1">
                 <img src="https://raw.githubusercontent.com/SunnysGym/SunnysGym.github.io/refs/heads/main/assets/img/brand/favicon.ico" alt="Sunny's Gym" className="w-14 h-14 object-contain transition-transform transform hover:scale-110" />
               </a>
+              <a href="https://ubyis.thetravelingtourguide.com/" target="_blank" rel="noopener noreferrer" className="m-1">
+                <img src="https://ubyis.thetravelingtourguide.com/img/logo.png" alt="UBYIS" className="w-14 h-14 object-contain transition-transform transform hover:scale-110" />
+              </a>
             </div>
           </div>
         </div>
